@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "dashboard": "Dashboard",
+    "analíticas": "Analytics",
+    "usuarios": "Users",
+    "configuración": "Settings"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "legal": "Legal"
+  },
+  "hero": {
+    "badge": "Real-time SaaS Dashboard",
+    "title": "Your metrics, always clear",
+    "subtitle": "Visualize revenue, users, and conversions with interactive charts and instant data updates.",
+    "cta_primary": "Go to Dashboard",
+    "cta_secondary": "View Analytics"
+  },
+  "kpi": {
+    "ingresos": "Total Revenue",
+    "usuarios": "Active Users",
+    "conversiones": "Conversion Rate",
+    "churn": "Churn Rate"
+  },
+  "dashboard": {
+    "title": "Main Dashboard",
+    "subtitle": "Summary of your business key metrics",
+    "period_label": "Period",
+    "recent_transactions": "Recent Transactions",
+    "revenue_trend": "Revenue Trend",
+    "user_growth": "User Growth",
+    "channel_distribution": "Channel Distribution",
+    "barChart": "Monthly revenue",
+    "barChartSub": "Revenue comparison last 6 months",
+    "donutChart": "Subscription distribution",
+    "donutChartSub": "Percentage by active plan",
+    "overview": "Executive summary",
+    "revenueChart": "Recurring revenue",
+    "revenueChartSub": "Projected MRR for this month",
+    "transactions": "Recent transactions",
+    "transactionsSub": "Last 10 operations"
+  },
+  "analytics": {
+    "title": "Advanced Analytics",
+    "subtitle": "In-depth analysis of performance and trends",
+    "monthly_comparison": "Monthly Comparison",
+    "conversion_funnel": "Conversion Funnel",
+    "top_sources": "Top Sources",
+    "barSub": "Comparison of key metrics by period",
+    "barTitle": "Performance by channel",
+    "chartSub": "Visitor evolution over the last 30 days",
+    "chartTitle": "Site Traffic",
+    "colBounce": "Bounce",
+    "colDuration": "Duration",
+    "colPage": "Page",
+    "colTrend": "Trend",
+    "colVisits": "Visits",
+    "dateRange": "Date Range",
+    "export": "Export Data",
+    "filter": "Filter",
+    "label": "Analytics",
+    "pieSub": "Traffic source distribution",
+    "pieTitle": "Visitor Origin",
+    "tableSub": "Most visited pages detail",
+    "tableTitle": "Top Pages"
+  },
+  "users": {
+    "title": "User Management",
+    "subtitle": "Manage and analyze your user base",
+    "search_placeholder": "Search users...",
+    "filter_status": "Filter by status",
+    "all_users": "All",
+    "active": "Active",
+    "inactive": "Inactive",
+    "name": "Name",
+    "email": "Email",
+    "plan": "Plan",
+    "status": "Status",
+    "joined": "Joined",
+    "revenue": "Revenue",
+    "breadcrumb": "Users",
+    "chart": {
+      "growth": "User Growth",
+      "growth_sub": "New signups per week",
+      "segments": "User Segmentation",
+      "segments_sub": "Distribution by plan type"
+    },
+    "export": "Export List",
+    "filter": "Filter Users",
+    "invite": "Invite User",
+    "kpi_active": "Active Users",
+    "kpi_mrr": "Recurring Revenue",
+    "kpi_total": "Total Users",
+    "search": "Search User",
+    "section_label": "User Management"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Customize your NovaDash experience",
+    "profile": "Profile",
+    "notifications": "Notifications",
+    "billing": "Billing",
+    "security": "Security",
+    "save": "Save changes",
+    "cancel": "Cancel"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error loading data",
+    "no_data": "No data available",
+    "view_all": "View all",
+    "export": "Export",
+    "filter": "Filter",
+    "search": "Search"
+  }
+}
