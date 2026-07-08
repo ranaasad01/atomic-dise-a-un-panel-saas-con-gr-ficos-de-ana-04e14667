@@ -240,7 +240,7 @@ function KPIStatCard({ id, label, value, prefix, suffix, change, icon: Icon, col
           <p className="text-2xl font-bold tracking-tight text-white">
             {prefix}{displayValue}{suffix}
           </p>
-          <div className={`flex items-center gap-1 text-xs font-medium ${isPositive ? "text-emerald-400" : "text-rose-400"}`}>
+          <div className={`flex items-center gap-1 text-xs font-medium ${isPositive ? "text-rose-400" : "text-rose-400"}`}>
             {isPositive ? <TrendingUp className="h-3 w-3" /> : <TrendingDown className="h-3 w-3" />}
             <span>{isPositive ? "+" : ""}{change}% vs período anterior</span>
           </div>
@@ -655,7 +655,7 @@ export default function AnalyticsPage() {
                   >
                     <p className="text-xl font-bold text-white tracking-tight">{item.value}</p>
                     <p className="text-xs text-slate-500 mt-1 leading-tight">{item.label}</p>
-                    <p className={`text-xs font-medium mt-2 ${isPos ? "text-emerald-400" : "text-rose-400"}`}>
+                    <p className={`text-xs font-medium mt-2 ${isPos ? "text-rose-400" : "text-rose-400"}`}>
                       {item.delta}
                     </p>
                   </motion.div>
@@ -707,7 +707,7 @@ export default function AnalyticsPage() {
                       <td className="px-6 py-3.5 text-slate-300 font-medium">{row.visitas.toLocaleString("es-ES")}</td>
                       <td className="px-6 py-3.5 text-slate-400">{row.tiempo}</td>
                       <td className="px-6 py-3.5">
-                        <span className={`text-xs font-medium ${parseFloat(row.rebote) < 30 ? "text-emerald-400" : parseFloat(row.rebote) < 38 ? "text-amber-400" : "text-rose-400"}`}>
+                        <span className={`text-xs font-medium ${parseFloat(row.rebote) < 30 ? "text-rose-400" : parseFloat(row.rebote) < 38 ? "text-amber-400" : "text-rose-400"}`}>
                           {row.rebote}
                         </span>
                       </td>

@@ -271,7 +271,7 @@ export default function AnalyticsPage() {
                   <span
                     className={`flex items-center gap-0.5 rounded-full px-2 py-0.5 text-xs font-semibold ${
                       isPositive
-                        ? "bg-emerald-500/15 text-emerald-400"
+                        ? "bg-rose-500/15 text-rose-400"
                         : "bg-rose-500/15 text-rose-400"
                     }`}
                   >
@@ -563,7 +563,7 @@ export default function AnalyticsPage() {
                     </td>
                     <td className="px-4 py-3.5 text-right">
                       {row.tendencia === "up" ? (
-                        <span className="inline-flex items-center gap-1 text-xs font-medium text-emerald-400">
+                        <span className="inline-flex items-center gap-1 text-xs font-medium text-rose-400">
                           <TrendingUp className="h-3.5 w-3.5" />
                           Subiendo
                         </span>

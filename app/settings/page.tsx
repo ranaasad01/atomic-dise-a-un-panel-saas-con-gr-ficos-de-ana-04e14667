@@ -36,7 +36,7 @@ const ACCENT_COLORS: AccentColor[] = [
   { name: "Índigo", value: "#6366F1", class: "bg-rose-500" },
   { name: "Violeta", value: "#8B5CF6", class: "bg-violet-500" },
   { name: "Cian", value: "#06B6D4", class: "bg-rose-500" },
-  { name: "Esmeralda", value: "#10B981", class: "bg-emerald-500" },
+  { name: "Esmeralda", value: "#10B981", class: "bg-rose-500" },
   { name: "Rosa", value: "#EC4899", class: "bg-pink-500" },
   { name: "Ámbar", value: "#F59E0B", class: "bg-amber-500" },
 ];
@@ -312,15 +312,15 @@ function PerfilTab() {
           </div>
           <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/8">
             <div className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/15 border border-emerald-500/25">
-                <Shield className="h-4 w-4 text-emerald-400" />
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-rose-500/15 border border-rose-500/25">
+                <Shield className="h-4 w-4 text-rose-400" />
               </div>
               <div>
                 <p className="text-sm font-medium text-slate-200">Autenticación en dos pasos</p>
                 <p className="text-xs text-slate-500">Protege tu cuenta con 2FA</p>
               </div>
             </div>
-            <span className="text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+            <span className="text-xs font-semibold text-rose-400 bg-rose-500/10 border border-rose-500/20 px-2.5 py-1 rounded-full">
               Activo
             </span>
           </div>
@@ -336,7 +336,7 @@ function PerfilTab() {
           whileTap={{ scale: 0.97 }}
           className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
             saved
-              ? "bg-emerald-500/20 border border-emerald-500/30 text-emerald-300"
+              ? "bg-rose-500/20 border border-rose-500/30 text-rose-300"
               : "bg-rose-500 hover:bg-rose-400 text-white shadow-[0_0_20px_rgba(99,102,241,0.35)]"
           }`}
         >
@@ -607,7 +607,7 @@ function FacturacionTab() {
               >
                 {cycle}
                 {cycle === "anual" && (
-                  <span className="ml-1.5 text-[10px] font-semibold text-emerald-400">-20%</span>
+                  <span className="ml-1.5 text-[10px] font-semibold text-rose-400">-20%</span>
                 )}
               </button>
             ))}
@@ -728,7 +728,7 @@ function FacturacionTab() {
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-xs font-semibold text-slate-200">{inv.amount}</span>
-                <span className="text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
+                <span className="text-[10px] font-semibold text-rose-400 bg-rose-500/10 border border-rose-500/20 px-2 py-0.5 rounded-full">
                   {inv.status}
                 </span>
                 <button

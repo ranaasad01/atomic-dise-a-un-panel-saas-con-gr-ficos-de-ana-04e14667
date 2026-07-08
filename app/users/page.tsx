@@ -80,7 +80,7 @@ const PLAN_COLORS: Record<Plan, string> = {
 };
 
 const ESTADO_CONFIG: Record<Estado, { label: string; color: string; bg: string }> = {
-  activo: { label: "Activo", color: "text-emerald-400", bg: "bg-emerald-400/10 border-emerald-400/20" },
+  activo: { label: "Activo", color: "text-rose-400", bg: "bg-rose-400/10 border-rose-400/20" },
   inactivo: { label: "Inactivo", color: "text-slate-400", bg: "bg-slate-400/10 border-slate-400/20" },
   pendiente: { label: "Pendiente", color: "text-amber-400", bg: "bg-amber-400/10 border-amber-400/20" },
 };
@@ -692,7 +692,7 @@ export default function UsersPage() {
               <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-1">
                 Crecimiento de usuarios
               </p>
-              <p className="text-2xl font-bold text-white mb-3">940 <span className="text-sm font-normal text-emerald-400">+18.4%</span></p>
+              <p className="text-2xl font-bold text-white mb-3">940 <span className="text-sm font-normal text-rose-400">+18.4%</span></p>
               <GrowthBar data={GROWTH_DATA} />
             </motion.div>
           </motion.div>

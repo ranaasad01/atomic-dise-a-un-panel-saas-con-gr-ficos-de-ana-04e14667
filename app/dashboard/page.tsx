@@ -178,9 +178,9 @@ const colorMap: Record<string, { bg: string; border: string; text: string; glow:
     glow: "shadow-violet-500/10",
   },
   emerald: {
-    bg: "bg-emerald-500/15",
-    border: "border-emerald-500/25",
-    text: "text-emerald-400",
+    bg: "bg-rose-500/15",
+    border: "border-rose-500/25",
+    text: "text-rose-400",
     glow: "shadow-emerald-500/10",
   },
   rose: {
@@ -225,7 +225,7 @@ function StatusBadge({ status }: { status: string }) {
     completado: {
       icon: <CheckCircle className="h-3 w-3" />,
       label: "Completado",
-      cls: "bg-emerald-500/15 text-emerald-400 border-emerald-500/25",
+      cls: "bg-rose-500/15 text-rose-400 border-rose-500/25",
     },
     pendiente: {
       icon: <Clock className="h-3 w-3" />,
@@ -392,7 +392,7 @@ export default function DashboardPage() {
                   <span
                     className={`inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-xs font-semibold border ${
                       goodChange
-                        ? "bg-emerald-500/15 text-emerald-400 border-emerald-500/25"
+                        ? "bg-rose-500/15 text-rose-400 border-rose-500/25"
                         : "bg-rose-500/15 text-rose-400 border-rose-500/25"
                     }`}
                   >

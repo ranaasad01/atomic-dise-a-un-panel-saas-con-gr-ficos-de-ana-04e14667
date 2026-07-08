@@ -162,10 +162,10 @@ const colorMap: Record<string, { bg: string; border: string; text: string; icon:
     icon: "text-sky-400",
   },
   emerald: {
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/20",
-    text: "text-emerald-400",
-    icon: "text-emerald-400",
+    bg: "bg-rose-500/10",
+    border: "border-rose-500/20",
+    text: "text-rose-400",
+    icon: "text-rose-400",
   },
   rose: {
     bg: "bg-rose-500/10",
@@ -297,11 +297,11 @@ export default function DashboardPage() {
                 </div>
                 <div className="mt-3 flex items-center gap-1.5">
                   {isPositive ? (
-                    <ArrowUpRight className="h-3.5 w-3.5 text-emerald-400" />
+                    <ArrowUpRight className="h-3.5 w-3.5 text-rose-400" />
                   ) : (
                     <ArrowDownRight className="h-3.5 w-3.5 text-rose-400" />
                   )}
-                  <span className={`text-xs font-semibold ${isPositive ? "text-emerald-400" : "text-rose-400"}`}>
+                  <span className={`text-xs font-semibold ${isPositive ? "text-rose-400" : "text-rose-400"}`}>
                     {isPositive ? "+" : ""}{card.change}%
                   </span>
                   <span className="text-xs text-slate-500">{card.description}</span>
@@ -585,7 +585,7 @@ export default function DashboardPage() {
                       <td className="px-4 py-4 text-right font-semibold text-white">{product.revenue}</td>
                       <td className="px-4 py-4 text-right text-slate-300">{(product.units ?? 0).toLocaleString("es-ES")}</td>
                       <td className="px-4 py-4 text-right">
-                        <span className={`inline-flex items-center gap-1 text-xs font-semibold ${isPositiveTrend ? "text-emerald-400" : "text-rose-400"}`}>
+                        <span className={`inline-flex items-center gap-1 text-xs font-semibold ${isPositiveTrend ? "text-rose-400" : "text-rose-400"}`}>
                           {isPositiveTrend ? (
                             <TrendingUp className="h-3.5 w-3.5" />
                           ) : (

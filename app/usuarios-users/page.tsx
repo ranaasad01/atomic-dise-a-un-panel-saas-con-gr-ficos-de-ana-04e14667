@@ -174,7 +174,7 @@ const usersData = [
 const avatarColorMap: Record<string, string> = {
   indigo: "bg-rose-500/20 text-rose-300 border-rose-500/30",
   violet: "bg-violet-500/20 text-violet-300 border-violet-500/30",
-  emerald: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+  emerald: "bg-rose-500/20 text-rose-300 border-rose-500/30",
   amber: "bg-amber-500/20 text-amber-300 border-amber-500/30",
   rose: "bg-rose-500/20 text-rose-300 border-rose-500/30",
   cyan: "bg-rose-500/20 text-rose-300 border-rose-500/30",
@@ -188,9 +188,9 @@ const kpiColorMap: Record<string, { bg: string; text: string; border: string; gl
     glow: "shadow-indigo-500/10",
   },
   emerald: {
-    bg: "bg-emerald-500/10",
-    text: "text-emerald-400",
-    border: "border-emerald-500/20",
+    bg: "bg-rose-500/10",
+    text: "text-rose-400",
+    border: "border-rose-500/20",
     glow: "shadow-emerald-500/10",
   },
   violet: {
@@ -215,13 +215,13 @@ const planBadgeMap: Record<string, string> = {
 };
 
 const statusBadgeMap: Record<string, string> = {
-  activo: "bg-emerald-500/15 text-emerald-300 border-emerald-500/25",
+  activo: "bg-rose-500/15 text-rose-300 border-rose-500/25",
   inactivo: "bg-slate-600/20 text-slate-400 border-slate-600/25",
   pendiente: "bg-amber-500/15 text-amber-300 border-amber-500/25",
 };
 
 const statusDotMap: Record<string, string> = {
-  activo: "bg-emerald-400",
+  activo: "bg-rose-400",
   inactivo: "bg-slate-500",
   pendiente: "bg-amber-400",
 };
@@ -383,7 +383,7 @@ export default function UsersPage() {
                     </div>
                     <span
                       className={`flex items-center gap-0.5 text-xs font-semibold ${
-                        isPositive ? "text-emerald-400" : "text-rose-400"
+                        isPositive ? "text-rose-400" : "text-rose-400"
                       }`}
                     >
                       {isPositive ? (
@@ -432,7 +432,7 @@ export default function UsersPage() {
                   Total
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                  <span className="h-2 w-2 rounded-full bg-rose-400" />
                   Activos
                 </span>
               </div>

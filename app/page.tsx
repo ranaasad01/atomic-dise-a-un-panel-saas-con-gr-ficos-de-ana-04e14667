@@ -298,7 +298,7 @@ export default function HomePage() {
                     data-atomic-id="ae3o7ya"
                     data-atomic-instance={__atomicIdx}>{k.value}</p>
                   <p
-                    className="text-xs text-emerald-400 mt-0.5"
+                    className="text-xs text-rose-400 mt-0.5"
                     data-atomic-id="ae3o9ms"
                     data-atomic-instance={__atomicIdx}>+{k.change}%</p>
                 </div>))}
@@ -343,7 +343,7 @@ export default function HomePage() {
             >
               <div className="flex items-center gap-2" data-atomic-id="ax1ulz4">
                 <div
-                  className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"
+                  className="h-2 w-2 rounded-full bg-rose-400 animate-pulse"
                   data-atomic-id="a1ovm70j" />
                 <span className="text-xs font-medium text-slate-300" data-atomic-id="alf47o4">Actualizado hace 2 min</span>
               </div>
@@ -379,7 +379,7 @@ export default function HomePage() {
                     <Icon className="h-4 w-4 text-rose-400" />
                   </div>
                   <span
-                    className="text-xs font-semibold text-emerald-400 bg-emerald-400/10 rounded-full px-2 py-0.5"
+                    className="text-xs font-semibold text-rose-400 bg-rose-400/10 rounded-full px-2 py-0.5"
                     data-atomic-id="acer6ng"
                     data-atomic-instance={__atomicIdx}>
                     +{k.change}%
@@ -541,7 +541,7 @@ export default function HomePage() {
                   <p className="text-xs text-slate-500 mt-0.5" data-atomic-id="af35obt">Comparativa mensual</p>
                 </div>
                 <span
-                  className="text-xs font-semibold text-emerald-400 bg-emerald-400/10 rounded-full px-3 py-1"
+                  className="text-xs font-semibold text-rose-400 bg-rose-400/10 rounded-full px-3 py-1"
                   data-atomic-id="anf35s8">
                   +18.4% vs año anterior
                 </span>
