@@ -1,20 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
-import { Sparkles, Mail, Lock, Eye, EyeOff, ArrowRight, Globe, Code2 } from 'lucide-react';
+import { useRouter } from "next/navigation";
+import { Sparkles, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import { fadeInUp, scaleIn, staggerContainer } from "@/lib/motion";
 import { APP_NAME } from "@/lib/data";
 
+const HARDCODED_PASSWORD = "rao123";
+
 export default function LoginPage() {
-  const [email, setEmail] = useState("");
+  const router = useRouter();
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // No real auth logic needed
+    setLoading(true);
+    setError("");
+    setTimeout(() => {
+      if (password === HARDCODED_PASSWORD) {
+        router.push("/dashboard");
+      } else {
+        setError("Contraseña incorrecta. Inténtalo de nuevo.");
+        setLoading(false);
+      }
+    }, 400);
   };
 
   return (
@@ -52,8 +65,8 @@ export default function LoginPage() {
 
           {/* Heading */}
           <motion.div variants={fadeInUp} className="text-center">
-            <h1 className="text-2xl font-bold text-white">Iniciar Sesión</h1>
-            <p className="mt-1 text-sm text-slate-400">Bienvenido de nuevo. Ingresa tus credenciales.</p>
+            <h1 className="text-2xl font-bold text-white">Bienvenido a {APP_NAME}</h1>
+            <p className="mt-1 text-sm text-slate-400">Ingresa la contraseña para continuar.</p>
           </motion.div>
 
           {/* Form */}
@@ -62,25 +75,6 @@ export default function LoginPage() {
             onSubmit={handleSubmit}
             className="flex flex-col gap-4"
           >
-            {/* Email field */}
-            <div className="flex flex-col gap-1.5">
-              <label htmlFor="email" className="text-sm font-medium text-slate-300">
-                Correo electrónico
-              </label>
-              <div className="relative">
-                <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 pointer-events-none" />
-                <input
-                  id="email"
-                  type="email"
-                  autoComplete="email"
-                  placeholder="tu@correo.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 pl-11 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500/60 focus:ring-1 focus:ring-indigo-500/40 transition-all text-sm"
-                />
-              </div>
-            </div>
-
             {/* Password field */}
             <div className="flex flex-col gap-1.5">
               <label htmlFor="password" className="text-sm font-medium text-slate-300">
@@ -92,76 +86,52 @@ export default function LoginPage() {
                   id="password"
                   type={showPassword ? "text" : "password"}
                   autoComplete="current-password"
-                  placeholder="••••••••"
+                  placeholder="Ingresa tu contraseña"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 pl-11 pr-11 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500/60 focus:ring-1 focus:ring-indigo-500/40 transition-all text-sm"
+                  required
+                  className="w-full bg-white/5 border border-white/10 rounded-xl pl-10 pr-10 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all duration-200"
                 />
                 <button
                   type="button"
-                  onClick={() => setShowPassword((prev) => !prev)}
+                  onClick={() => setShowPassword((v) => !v)}
                   className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 transition-colors"
                   aria-label={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
                 >
                   {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>
               </div>
-              {/* Forgot password */}
-              <div className="flex justify-end">
-                <Link
-                  href="#"
-                  className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors"
-                >
-                  ¿Olvidaste tu contraseña?
-                </Link>
-              </div>
             </div>
 
-            {/* Submit button */}
-            <button
+            {/* Error message */}
+            {error && (
+              <motion.p
+                initial={{ opacity: 0, y: -4 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-sm text-red-400 text-center"
+              >
+                {error}
+              </motion.p>
+            )}
+
+            {/* Submit */}
+            <motion.button
               type="submit"
-              className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition-all duration-200 text-sm"
+              disabled={loading}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="flex items-center justify-center gap-2 w-full bg-indigo-600 hover:bg-indigo-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-2.5 rounded-xl transition-all duration-200 shadow-lg shadow-indigo-500/20"
             >
-              Entrar
-              <ArrowRight className="h-4 w-4" />
-            </button>
+              {loading ? (
+                <span className="h-4 w-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+              ) : (
+                <>
+                  Entrar
+                  <ArrowRight className="h-4 w-4" />
+                </>
+              )}
+            </motion.button>
           </motion.form>
-
-          {/* Divider */}
-          <motion.div variants={fadeInUp} className="flex items-center gap-3">
-            <div className="flex-1 h-px bg-white/10" />
-            <span className="text-xs text-slate-500">o continúa con</span>
-            <div className="flex-1 h-px bg-white/10" />
-          </motion.div>
-
-          {/* Social login buttons */}
-          <motion.div variants={fadeInUp} className="flex gap-3">
-            <button
-              type="button"
-              className="flex-1 flex items-center justify-center gap-2 border border-white/10 bg-white/5 hover:bg-white/10 rounded-xl py-2.5 text-sm text-slate-300 transition-all"
-            >
-              <Globe className="h-4 w-4" />
-              Google
-            </button>
-            <button
-              type="button"
-              className="flex-1 flex items-center justify-center gap-2 border border-white/10 bg-white/5 hover:bg-white/10 rounded-xl py-2.5 text-sm text-slate-300 transition-all"
-            >
-              <Code2 className="h-4 w-4" />
-              GitHub
-            </button>
-          </motion.div>
-
-          {/* Bottom text */}
-          <motion.p variants={fadeInUp} className="text-center text-sm text-slate-500">
-            ¿No tienes cuenta?{" "}
-            <Link
-              href="/"
-              className="text-indigo-400 hover:text-indigo-300 transition-colors font-medium"
-            >
-              Solicitar acceso
-            </Link>
-          </motion.p>
         </motion.div>
       </motion.div>
     </div>
