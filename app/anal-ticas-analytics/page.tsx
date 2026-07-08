@@ -125,7 +125,7 @@ const kpis = [
 ];
 
 const colorMap: Record<string, string> = {
-  indigo: "bg-indigo-500/15 border-indigo-500/25 text-indigo-400",
+  indigo: "bg-cyan-500/15 border-cyan-500/25 text-cyan-400",
   violet: "bg-violet-500/15 border-violet-500/25 text-violet-400",
   purple: "bg-purple-500/15 border-purple-500/25 text-purple-400",
   fuchsia: "bg-fuchsia-500/15 border-fuchsia-500/25 text-fuchsia-400",
@@ -194,7 +194,7 @@ export default function AnalyticsPage() {
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
-        className="border-b border-white/8 bg-gradient-to-b from-indigo-950/30 to-transparent px-4 py-10 sm:px-6 lg:px-8"
+        className="border-b border-white/8 bg-gradient-to-b from-cyan-950/30 to-transparent px-4 py-10 sm:px-6 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
           <motion.div
@@ -202,7 +202,7 @@ export default function AnalyticsPage() {
             className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
           >
             <div>
-              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-indigo-400">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-cyan-400">
                 {t("analytics.label") || "Analíticas"}
               </p>
               <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -233,7 +233,7 @@ export default function AnalyticsPage() {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="flex items-center gap-1.5 rounded-lg bg-indigo-600 px-3 py-2 text-xs font-semibold text-white hover:bg-indigo-500 transition-all duration-200 shadow-[0_0_16px_rgba(99,102,241,0.3)]"
+                className="flex items-center gap-1.5 rounded-lg bg-cyan-600 px-3 py-2 text-xs font-semibold text-white hover:bg-cyan-500 transition-all duration-200 shadow-[0_0_16px_rgba(99,102,241,0.3)]"
               >
                 <Download className="h-3.5 w-3.5" />
                 {t("analytics.export") || "Exportar"}
@@ -293,7 +293,7 @@ export default function AnalyticsPage() {
                   <p className="mt-1 text-xs text-slate-600">{kpi.sub}</p>
                 </div>
                 {/* subtle glow */}
-                <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-indigo-500/5 blur-2xl" />
+                <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-cyan-500/5 blur-2xl" />
               </motion.div>
             );
           })}
@@ -326,7 +326,7 @@ export default function AnalyticsPage() {
                     onClick={() => setActiveMetric(m.key)}
                     className={`rounded-md px-3 py-1 text-xs font-medium transition-all duration-200 ${
                       activeMetric === m.key
-                        ? "bg-indigo-600 text-white shadow-sm"
+                        ? "bg-cyan-600 text-white shadow-sm"
                         : "text-slate-400 hover:text-slate-200"
                     }`}
                   >
@@ -342,7 +342,7 @@ export default function AnalyticsPage() {
                     onClick={() => setActivePeriod(p.value)}
                     className={`rounded-md px-3 py-1 text-xs font-medium transition-all duration-200 ${
                       activePeriod === p.value
-                        ? "bg-indigo-600 text-white shadow-sm"
+                        ? "bg-cyan-600 text-white shadow-sm"
                         : "text-slate-400 hover:text-slate-200"
                     }`}
                   >
@@ -512,7 +512,7 @@ export default function AnalyticsPage() {
                 {t("analytics.tableSub") || "Rendimiento individual por URL"}
               </p>
             </div>
-            <span className="rounded-full bg-indigo-500/15 border border-indigo-500/25 px-2.5 py-0.5 text-xs font-semibold text-indigo-300">
+            <span className="rounded-full bg-cyan-500/15 border border-cyan-500/25 px-2.5 py-0.5 text-xs font-semibold text-cyan-300">
               {topPages.length} páginas
             </span>
           </div>
@@ -548,7 +548,7 @@ export default function AnalyticsPage() {
                     className="border-b border-white/5 hover:bg-white/3 transition-colors duration-150"
                   >
                     <td className="px-6 py-3.5">
-                      <span className="font-mono text-xs text-indigo-300 bg-indigo-500/10 rounded-md px-2 py-0.5">
+                      <span className="font-mono text-xs text-cyan-300 bg-cyan-500/10 rounded-md px-2 py-0.5">
                         {row.page}
                       </span>
                     </td>

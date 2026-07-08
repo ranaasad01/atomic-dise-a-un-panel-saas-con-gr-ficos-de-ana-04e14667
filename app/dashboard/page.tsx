@@ -166,9 +166,9 @@ const transactions = [
 
 const colorMap: Record<string, { bg: string; border: string; text: string; glow: string }> = {
   indigo: {
-    bg: "bg-indigo-500/15",
-    border: "border-indigo-500/25",
-    text: "text-indigo-400",
+    bg: "bg-cyan-500/15",
+    border: "border-cyan-500/25",
+    text: "text-cyan-400",
     glow: "shadow-indigo-500/10",
   },
   violet: {
@@ -256,7 +256,7 @@ function StatusBadge({ status }: { status: string }) {
 function PlanBadge({ plan }: { plan: string }) {
   const cls =
     plan === "Enterprise"
-      ? "bg-indigo-500/15 text-indigo-300 border-indigo-500/25"
+      ? "bg-cyan-500/15 text-cyan-300 border-cyan-500/25"
       : plan === "Pro"
       ? "bg-violet-500/15 text-violet-300 border-violet-500/25"
       : "bg-slate-500/15 text-slate-400 border-slate-500/25";
@@ -314,7 +314,7 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-[#0A0F1E] text-white">
       {/* Background glow */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-40 left-1/4 h-[500px] w-[500px] rounded-full bg-indigo-600/8 blur-[120px]" />
+        <div className="absolute -top-40 left-1/4 h-[500px] w-[500px] rounded-full bg-cyan-600/8 blur-[120px]" />
         <div className="absolute top-1/3 right-1/4 h-[400px] w-[400px] rounded-full bg-violet-600/6 blur-[100px]" />
       </div>
 
@@ -327,7 +327,7 @@ export default function DashboardPage() {
           className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
         >
           <motion.div variants={fadeInUp}>
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-1">
+            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-1">
               {t("dashboard.overview") || "Resumen general"}
             </p>
             <h1 className="text-3xl font-bold tracking-tight text-white text-balance">
@@ -349,7 +349,7 @@ export default function DashboardPage() {
                 onClick={() => setActivePeriod(p.value)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
                   activePeriod === p.value
-                    ? "bg-indigo-500/25 text-indigo-300 border border-indigo-500/30"
+                    ? "bg-cyan-500/25 text-cyan-300 border border-cyan-500/30"
                     : "text-slate-400 hover:text-slate-200 hover:bg-white/5"
                 }`}
               >
@@ -438,7 +438,7 @@ export default function DashboardPage() {
             </div>
             <div className="flex items-center gap-4 text-xs text-slate-400">
               <span className="flex items-center gap-1.5">
-                <span className="h-2 w-4 rounded-full bg-indigo-400 inline-block" />
+                <span className="h-2 w-4 rounded-full bg-cyan-400 inline-block" />
                 Ingresos
               </span>
               <span className="flex items-center gap-1.5">
@@ -544,7 +544,7 @@ export default function DashboardPage() {
             </ResponsiveContainer>
             <div className="flex items-center gap-4 mt-4 text-xs text-slate-400">
               <span className="flex items-center gap-1.5">
-                <span className="h-2 w-4 rounded-full bg-indigo-500 inline-block" />
+                <span className="h-2 w-4 rounded-full bg-cyan-500 inline-block" />
                 Período actual
               </span>
               <span className="flex items-center gap-1.5">
@@ -635,7 +635,7 @@ export default function DashboardPage() {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="self-start sm:self-auto px-3 py-1.5 rounded-lg border border-indigo-500/30 bg-indigo-500/15 text-indigo-300 text-xs font-medium hover:bg-indigo-500/25 transition-all duration-200"
+              className="self-start sm:self-auto px-3 py-1.5 rounded-lg border border-cyan-500/30 bg-cyan-500/15 text-cyan-300 text-xs font-medium hover:bg-cyan-500/25 transition-all duration-200"
             >
               Ver todas
             </motion.button>
@@ -736,7 +736,7 @@ export default function DashboardPage() {
                   key={n}
                   className={`h-7 w-7 rounded-lg text-xs font-medium transition-all duration-200 ${
                     n === 1
-                      ? "bg-indigo-500/25 text-indigo-300 border border-indigo-500/30"
+                      ? "bg-cyan-500/25 text-cyan-300 border border-cyan-500/30"
                       : "text-slate-500 hover:text-slate-200 hover:bg-white/5"
                   }`}
                 >

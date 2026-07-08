@@ -172,7 +172,7 @@ const usersData = [
 ];
 
 const avatarColorMap: Record<string, string> = {
-  indigo: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
+  indigo: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
   violet: "bg-violet-500/20 text-violet-300 border-violet-500/30",
   emerald: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
   amber: "bg-amber-500/20 text-amber-300 border-amber-500/30",
@@ -182,9 +182,9 @@ const avatarColorMap: Record<string, string> = {
 
 const kpiColorMap: Record<string, { bg: string; text: string; border: string; glow: string }> = {
   indigo: {
-    bg: "bg-indigo-500/10",
-    text: "text-indigo-400",
-    border: "border-indigo-500/20",
+    bg: "bg-cyan-500/10",
+    text: "text-cyan-400",
+    border: "border-cyan-500/20",
     glow: "shadow-indigo-500/10",
   },
   emerald: {
@@ -208,7 +208,7 @@ const kpiColorMap: Record<string, { bg: string; text: string; border: string; gl
 };
 
 const planBadgeMap: Record<string, string> = {
-  Enterprise: "bg-indigo-500/15 text-indigo-300 border-indigo-500/25",
+  Enterprise: "bg-cyan-500/15 text-cyan-300 border-cyan-500/25",
   Pro: "bg-violet-500/15 text-violet-300 border-violet-500/25",
   Básico: "bg-slate-500/15 text-slate-300 border-slate-500/25",
   Gratuito: "bg-slate-700/40 text-slate-400 border-slate-600/25",
@@ -288,9 +288,9 @@ export default function UsersPage() {
     if (sortKey !== col)
       return <ArrowDown className="h-3 w-3 text-slate-600 ml-1" />;
     return sortDir === "asc" ? (
-      <ArrowUp className="h-3 w-3 text-indigo-400 ml-1" />
+      <ArrowUp className="h-3 w-3 text-cyan-400 ml-1" />
     ) : (
-      <ArrowDown className="h-3 w-3 text-indigo-400 ml-1" />
+      <ArrowDown className="h-3 w-3 text-cyan-400 ml-1" />
     );
   };
 
@@ -307,7 +307,7 @@ export default function UsersPage() {
           >
             <motion.div variants={fadeInUp}>
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-semibold uppercase tracking-widest text-indigo-400">
+                <span className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
                   {t("users.breadcrumb") || "Gestión"}
                 </span>
               </div>
@@ -331,7 +331,7 @@ export default function UsersPage() {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-sm font-semibold text-white shadow-[0_0_20px_rgba(99,102,241,0.3)] transition-all duration-200"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-sm font-semibold text-white shadow-[0_0_20px_rgba(99,102,241,0.3)] transition-all duration-200"
               >
                 <User className="h-4 w-4" />
                 {t("users.invite") || "Invitar Usuario"}
@@ -428,7 +428,7 @@ export default function UsersPage() {
               </div>
               <div className="flex items-center gap-3 text-xs text-slate-500">
                 <span className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-indigo-400" />
+                  <span className="h-2 w-2 rounded-full bg-cyan-400" />
                   Total
                 </span>
                 <span className="flex items-center gap-1.5">
@@ -570,7 +570,7 @@ export default function UsersPage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder={t("users.search") || "Buscar por nombre o email..."}
-                className="w-full pl-9 pr-4 py-2 rounded-xl border border-white/8 bg-white/5 text-sm text-slate-200 placeholder-slate-600 focus:outline-none focus:border-indigo-500/50 focus:bg-white/8 transition-all duration-200"
+                className="w-full pl-9 pr-4 py-2 rounded-xl border border-white/8 bg-white/5 text-sm text-slate-200 placeholder-slate-600 focus:outline-none focus:border-cyan-500/50 focus:bg-white/8 transition-all duration-200"
               />
             </div>
             <div className="flex items-center gap-2 flex-wrap">
@@ -578,7 +578,7 @@ export default function UsersPage() {
                 <select
                   value={filterPlan}
                   onChange={(e) => setFilterPlan(e.target.value)}
-                  className="appearance-none pl-3 pr-8 py-2 rounded-xl border border-white/8 bg-white/5 text-sm text-slate-300 focus:outline-none focus:border-indigo-500/50 transition-all duration-200 cursor-pointer"
+                  className="appearance-none pl-3 pr-8 py-2 rounded-xl border border-white/8 bg-white/5 text-sm text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-all duration-200 cursor-pointer"
                 >
                   <option value="todos">Todos los planes</option>
                   <option value="Enterprise">Enterprise</option>
@@ -592,7 +592,7 @@ export default function UsersPage() {
                 <select
                   value={filterStatus}
                   onChange={(e) => setFilterStatus(e.target.value)}
-                  className="appearance-none pl-3 pr-8 py-2 rounded-xl border border-white/8 bg-white/5 text-sm text-slate-300 focus:outline-none focus:border-indigo-500/50 transition-all duration-200 cursor-pointer"
+                  className="appearance-none pl-3 pr-8 py-2 rounded-xl border border-white/8 bg-white/5 text-sm text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-all duration-200 cursor-pointer"
                 >
                   <option value="todos">Todos los estados</option>
                   <option value="activo">Activo</option>
@@ -637,8 +637,8 @@ export default function UsersPage() {
                       onClick={toggleAll}
                       className={`h-4 w-4 rounded border flex items-center justify-center transition-all duration-200 ${
                         selectedIds.length === filtered.length && filtered.length > 0
-                          ? "bg-indigo-500 border-indigo-500"
-                          : "border-white/20 bg-white/5 hover:border-indigo-500/50"
+                          ? "bg-cyan-500 border-cyan-500"
+                          : "border-white/20 bg-white/5 hover:border-cyan-500/50"
                       }`}
                     >
                       {selectedIds.length === filtered.length && filtered.length > 0 && (
@@ -715,7 +715,7 @@ export default function UsersPage() {
                       transition={{ delay: idx * 0.04, duration: 0.3, ease: "easeOut" }}
                       className={`border-b border-white/4 transition-colors duration-150 ${
                         isSelected
-                          ? "bg-indigo-500/5"
+                          ? "bg-cyan-500/5"
                           : "hover:bg-white/3"
                       }`}
                     >
@@ -724,8 +724,8 @@ export default function UsersPage() {
                           onClick={() => toggleSelect(user.id)}
                           className={`h-4 w-4 rounded border flex items-center justify-center transition-all duration-200 ${
                             isSelected
-                              ? "bg-indigo-500 border-indigo-500"
-                              : "border-white/20 bg-white/5 hover:border-indigo-500/50"
+                              ? "bg-cyan-500 border-cyan-500"
+                              : "border-white/20 bg-white/5 hover:border-cyan-500/50"
                           }`}
                         >
                           {isSelected && (
@@ -790,7 +790,7 @@ export default function UsersPage() {
                           <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
-                            className="h-7 w-7 flex items-center justify-center rounded-lg border border-white/8 bg-white/5 text-slate-500 hover:text-indigo-300 hover:bg-indigo-500/10 hover:border-indigo-500/25 transition-all duration-200"
+                            className="h-7 w-7 flex items-center justify-center rounded-lg border border-white/8 bg-white/5 text-slate-500 hover:text-cyan-300 hover:bg-cyan-500/10 hover:border-cyan-500/25 transition-all duration-200"
                             aria-label="Ver usuario"
                           >
                             <Eye className="h-3.5 w-3.5" />
@@ -832,7 +832,7 @@ export default function UsersPage() {
                             setFilterPlan("todos");
                             setFilterStatus("todos");
                           }}
-                          className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors duration-200"
+                          className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
                         >
                           Limpiar filtros
                         </button>
@@ -859,7 +859,7 @@ export default function UsersPage() {
                   key={page}
                   className={`h-7 w-7 rounded-lg text-xs font-medium transition-all duration-200 ${
                     page === 1
-                      ? "bg-indigo-500/20 border border-indigo-500/30 text-indigo-300"
+                      ? "bg-cyan-500/20 border border-cyan-500/30 text-cyan-300"
                       : "border border-white/8 bg-white/5 text-slate-500 hover:text-slate-300 hover:bg-white/10"
                   }`}
                 >

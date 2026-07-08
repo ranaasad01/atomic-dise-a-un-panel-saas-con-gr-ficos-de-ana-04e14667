@@ -58,8 +58,8 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0 group">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/20 border border-indigo-500/30 group-hover:bg-indigo-500/30 transition-all duration-300">
-              <Sparkles className="h-4 w-4 text-indigo-400" />
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-cyan-500/20 border border-cyan-500/30 group-hover:bg-cyan-500/30 transition-all duration-300">
+              <Sparkles className="h-4 w-4 text-cyan-400" />
             </div>
             <span className="text-lg font-bold tracking-tight text-white">
               {APP_NAME}
@@ -82,7 +82,7 @@ export default function Navbar() {
                     t(`nav.${link.label.toLowerCase().replace(/\s/g, "_")}`) || link.label,
                     `relative px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-200 ${
                       active
-                        ? "text-indigo-300 bg-indigo-500/15 border border-indigo-500/25"
+                        ? "text-cyan-300 bg-cyan-500/15 border border-cyan-500/25"
                         : "text-slate-400 hover:text-slate-100 hover:bg-white/5"
                     }`
                   )}
@@ -100,7 +100,7 @@ export default function Navbar() {
               aria-label="Notificaciones"
             >
               <Bell className="h-4 w-4" />
-              <span className="absolute top-1 right-1 h-1.5 w-1.5 rounded-full bg-indigo-400" />
+              <span className="absolute top-1 right-1 h-1.5 w-1.5 rounded-full bg-cyan-400" />
             </motion.button>
 
             <motion.button
@@ -149,7 +149,7 @@ export default function Navbar() {
                       link.label,
                       `block px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                         active
-                          ? "text-indigo-300 bg-indigo-500/15 border border-indigo-500/25"
+                          ? "text-cyan-300 bg-cyan-500/15 border border-cyan-500/25"
                           : "text-slate-400 hover:text-slate-100 hover:bg-white/5"
                       }`,
                       () => setMobileOpen(false)

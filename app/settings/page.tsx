@@ -33,7 +33,7 @@ const TABS: { id: Tab; label: string; icon: React.ElementType }[] = [
 ];
 
 const ACCENT_COLORS: AccentColor[] = [
-  { name: "Índigo", value: "#6366F1", class: "bg-indigo-500" },
+  { name: "Índigo", value: "#6366F1", class: "bg-cyan-500" },
   { name: "Violeta", value: "#8B5CF6", class: "bg-violet-500" },
   { name: "Cian", value: "#06B6D4", class: "bg-cyan-500" },
   { name: "Esmeralda", value: "#10B981", class: "bg-emerald-500" },
@@ -137,8 +137,8 @@ function Toggle({
       role="switch"
       aria-checked={enabled}
       onClick={() => onChange(!enabled)}
-      className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A] ${
-        enabled ? "bg-indigo-500" : "bg-white/10"
+      className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A] ${
+        enabled ? "bg-cyan-500" : "bg-white/10"
       }`}
     >
       <span
@@ -185,7 +185,7 @@ function PerfilTab() {
   };
 
   const inputClass =
-    "w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/60 focus:border-indigo-500/40 transition-all duration-200";
+    "w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/60 focus:border-cyan-500/40 transition-all duration-200";
 
   const labelClass = "block text-xs font-semibold uppercase tracking-widest text-slate-500 mb-1.5";
 
@@ -196,12 +196,12 @@ function PerfilTab() {
         <h2 className="text-sm font-semibold text-slate-200 mb-4">Foto de perfil</h2>
         <div className="flex items-center gap-5">
           <div className="relative shrink-0">
-            <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-indigo-500/40 to-violet-600/40 border border-indigo-500/30 flex items-center justify-center text-2xl font-bold text-indigo-300 select-none">
+            <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-cyan-500/40 to-violet-600/40 border border-cyan-500/30 flex items-center justify-center text-2xl font-bold text-cyan-300 select-none">
               AR
             </div>
             <button
               type="button"
-              className="absolute -bottom-1.5 -right-1.5 flex h-7 w-7 items-center justify-center rounded-full bg-indigo-500 border-2 border-[#0F172A] text-white hover:bg-indigo-400 transition-colors duration-200"
+              className="absolute -bottom-1.5 -right-1.5 flex h-7 w-7 items-center justify-center rounded-full bg-cyan-500 border-2 border-[#0F172A] text-white hover:bg-cyan-400 transition-colors duration-200"
               aria-label="Cambiar foto"
             >
               <Camera className="h-3.5 w-3.5" />
@@ -212,7 +212,7 @@ function PerfilTab() {
             <p className="text-xs text-slate-500 mt-0.5">PNG, JPG o GIF. Máximo 2 MB.</p>
             <button
               type="button"
-              className="mt-2 text-xs font-medium text-indigo-400 hover:text-indigo-300 transition-colors duration-200"
+              className="mt-2 text-xs font-medium text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
             >
               Subir nueva imagen
             </button>
@@ -295,8 +295,8 @@ function PerfilTab() {
         <div className="space-y-4">
           <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/8">
             <div className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/15 border border-indigo-500/25">
-                <Lock className="h-4 w-4 text-indigo-400" />
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-cyan-500/15 border border-cyan-500/25">
+                <Lock className="h-4 w-4 text-cyan-400" />
               </div>
               <div>
                 <p className="text-sm font-medium text-slate-200">Contraseña</p>
@@ -305,7 +305,7 @@ function PerfilTab() {
             </div>
             <button
               type="button"
-              className="text-xs font-medium text-indigo-400 hover:text-indigo-300 transition-colors duration-200 flex items-center gap-1"
+              className="text-xs font-medium text-cyan-400 hover:text-cyan-300 transition-colors duration-200 flex items-center gap-1"
             >
               Cambiar <ChevronRight className="h-3.5 w-3.5" />
             </button>
@@ -337,7 +337,7 @@ function PerfilTab() {
           className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
             saved
               ? "bg-emerald-500/20 border border-emerald-500/30 text-emerald-300"
-              : "bg-indigo-500 hover:bg-indigo-400 text-white shadow-[0_0_20px_rgba(99,102,241,0.35)]"
+              : "bg-cyan-500 hover:bg-cyan-400 text-white shadow-[0_0_20px_rgba(99,102,241,0.35)]"
           }`}
         >
           {saved ? (
@@ -368,8 +368,8 @@ function NotificacionesTab() {
     <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="space-y-6">
       <SectionCard>
         <div className="flex items-center gap-3 mb-6">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-500/15 border border-indigo-500/25">
-            <Bell className="h-4.5 w-4.5 text-indigo-400" />
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-500/15 border border-cyan-500/25">
+            <Bell className="h-4.5 w-4.5 text-cyan-400" />
           </div>
           <div>
             <h2 className="text-sm font-semibold text-slate-200">Preferencias de notificación</h2>
@@ -404,7 +404,7 @@ function NotificacionesTab() {
               type="button"
               className={`px-3 py-2 rounded-xl text-xs font-medium border transition-all duration-200 ${
                 i === 2
-                  ? "bg-indigo-500/20 border-indigo-500/40 text-indigo-300"
+                  ? "bg-cyan-500/20 border-cyan-500/40 text-cyan-300"
                   : "bg-white/5 border-white/10 text-slate-400 hover:text-slate-200 hover:bg-white/10"
               }`}
             >
@@ -439,7 +439,7 @@ function AparienciaTab() {
                 onClick={() => setTheme(t)}
                 className={`relative flex flex-col items-center gap-2 p-4 rounded-xl border transition-all duration-200 ${
                   active
-                    ? "border-indigo-500/50 bg-indigo-500/10"
+                    ? "border-cyan-500/50 bg-cyan-500/10"
                     : "border-white/10 bg-white/5 hover:bg-white/8"
                 }`}
               >
@@ -452,11 +452,11 @@ function AparienciaTab() {
                       : "bg-gradient-to-r from-slate-900 to-slate-100 border-slate-500"
                   }`}
                 />
-                <span className={`text-xs font-medium ${active ? "text-indigo-300" : "text-slate-400"}`}>
+                <span className={`text-xs font-medium ${active ? "text-cyan-300" : "text-slate-400"}`}>
                   {labels[t]}
                 </span>
                 {active && (
-                  <span className="absolute top-2 right-2 flex h-4 w-4 items-center justify-center rounded-full bg-indigo-500">
+                  <span className="absolute top-2 right-2 flex h-4 w-4 items-center justify-center rounded-full bg-cyan-500">
                     <Check className="h-2.5 w-2.5 text-white" />
                   </span>
                 )}
@@ -522,7 +522,7 @@ function AparienciaTab() {
                   onClick={() => setDensity(d)}
                   className={`flex-1 py-2 rounded-xl text-xs font-medium border capitalize transition-all duration-200 ${
                     density === d
-                      ? "bg-indigo-500/20 border-indigo-500/40 text-indigo-300"
+                      ? "bg-cyan-500/20 border-cyan-500/40 text-cyan-300"
                       : "bg-white/5 border-white/10 text-slate-400 hover:text-slate-200"
                   }`}
                 >
@@ -536,7 +536,7 @@ function AparienciaTab() {
               <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
                 Tamaño de fuente
               </p>
-              <span className="text-xs font-mono text-indigo-400">{fontSize}px</span>
+              <span className="text-xs font-mono text-cyan-400">{fontSize}px</span>
             </div>
             <input
               type="range"
@@ -545,7 +545,7 @@ function AparienciaTab() {
               step={1}
               value={fontSize}
               onChange={(e) => setFontSize(Number(e.target.value))}
-              className="w-full accent-indigo-500 cursor-pointer"
+              className="w-full accent-cyan-500 cursor-pointer"
             />
             <div className="flex justify-between mt-1">
               <span className="text-xs text-slate-600">12px</span>
@@ -566,14 +566,14 @@ function FacturacionTab() {
       {/* Current plan banner */}
       <motion.div
         variants={fadeInUp}
-        className="relative overflow-hidden rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-500/10 via-violet-500/5 to-transparent p-6"
+        className="relative overflow-hidden rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-500/10 via-violet-500/5 to-transparent p-6"
       >
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.15),transparent_60%)]" />
         <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <Zap className="h-4 w-4 text-indigo-400" />
-              <span className="text-xs font-semibold uppercase tracking-widest text-indigo-400">
+              <Zap className="h-4 w-4 text-cyan-400" />
+              <span className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
                 Plan actual
               </span>
             </div>
@@ -601,7 +601,7 @@ function FacturacionTab() {
                 onClick={() => setBillingCycle(cycle)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium capitalize transition-all duration-200 ${
                   billingCycle === cycle
-                    ? "bg-indigo-500 text-white shadow"
+                    ? "bg-cyan-500 text-white shadow"
                     : "text-slate-400 hover:text-slate-200"
                 }`}
               >
@@ -629,12 +629,12 @@ function FacturacionTab() {
                 whileHover={{ y: -2 }}
                 className={`relative flex flex-col rounded-2xl border p-5 transition-all duration-300 ${
                   plan.highlight
-                    ? "border-indigo-500/50 bg-indigo-500/10 shadow-[0_0_30px_rgba(99,102,241,0.15)]"
+                    ? "border-cyan-500/50 bg-cyan-500/10 shadow-[0_0_30px_rgba(99,102,241,0.15)]"
                     : "border-white/10 bg-white/5"
                 }`}
               >
                 {plan.current && (
-                  <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-widest bg-indigo-500 text-white px-3 py-0.5 rounded-full">
+                  <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-widest bg-cyan-500 text-white px-3 py-0.5 rounded-full">
                     Actual
                   </span>
                 )}
@@ -657,7 +657,7 @@ function FacturacionTab() {
                 <ul className="space-y-2 flex-1 mb-5">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2 text-xs text-slate-300">
-                      <Check className="h-3.5 w-3.5 text-indigo-400 shrink-0 mt-0.5" />
+                      <Check className="h-3.5 w-3.5 text-cyan-400 shrink-0 mt-0.5" />
                       {feature}
                     </li>
                   ))}
@@ -668,7 +668,7 @@ function FacturacionTab() {
                     plan.current
                       ? "bg-white/10 border border-white/15 text-slate-300 cursor-default"
                       : plan.highlight
-                      ? "bg-indigo-500 hover:bg-indigo-400 text-white shadow-[0_0_16px_rgba(99,102,241,0.4)]"
+                      ? "bg-cyan-500 hover:bg-cyan-400 text-white shadow-[0_0_16px_rgba(99,102,241,0.4)]"
                       : "bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10"
                   }`}
                 >
@@ -695,7 +695,7 @@ function FacturacionTab() {
           </div>
           <button
             type="button"
-            className="text-xs font-medium text-indigo-400 hover:text-indigo-300 transition-colors duration-200"
+            className="text-xs font-medium text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
           >
             Cambiar
           </button>
@@ -733,7 +733,7 @@ function FacturacionTab() {
                 </span>
                 <button
                   type="button"
-                  className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors duration-200"
+                  className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
                 >
                   PDF
                 </button>
@@ -779,7 +779,7 @@ export default function SettingsPage() {
     <main className="min-h-screen bg-[#0F172A] pt-8 pb-24">
       {/* Ambient glow */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-indigo-600/8 blur-[120px]" />
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-cyan-600/8 blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -820,11 +820,11 @@ export default function SettingsPage() {
                     whileTap={{ scale: 0.97 }}
                     className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium w-full text-left transition-all duration-200 ${
                       active
-                        ? "bg-indigo-500/15 border border-indigo-500/30 text-indigo-300"
+                        ? "bg-cyan-500/15 border border-cyan-500/30 text-cyan-300"
                         : "text-slate-400 hover:text-slate-200 hover:bg-white/5 border border-transparent"
                     }`}
                   >
-                    <Icon className={`h-4 w-4 shrink-0 ${active ? "text-indigo-400" : "text-slate-500"}`} />
+                    <Icon className={`h-4 w-4 shrink-0 ${active ? "text-cyan-400" : "text-slate-500"}`} />
                     {tab.label}
                   </motion.button>
                 );

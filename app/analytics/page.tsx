@@ -174,9 +174,9 @@ interface KPIProps {
 
 const colorMap: Record<string, { bg: string; border: string; text: string; glow: string }> = {
   indigo: {
-    bg: "bg-indigo-500/10",
-    border: "border-indigo-500/20",
-    text: "text-indigo-400",
+    bg: "bg-cyan-500/10",
+    border: "border-cyan-500/20",
+    text: "text-cyan-400",
     glow: "shadow-indigo-500/10",
   },
   violet: {
@@ -346,7 +346,7 @@ export default function AnalyticsPage() {
     <main className="min-h-screen bg-[#0A0F1E] text-white">
       {/* Ambient glow */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-indigo-600/10 blur-3xl" />
+        <div className="absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-cyan-600/10 blur-3xl" />
         <div className="absolute top-1/3 right-1/4 h-80 w-80 rounded-full bg-violet-600/8 blur-3xl" />
       </div>
 
@@ -361,7 +361,7 @@ export default function AnalyticsPage() {
         >
           <motion.div variants={fadeInUp} className="space-y-1">
             <div className="flex items-center gap-2 mb-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-300">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-300">
                 <ArrowUpRight className="h-3 w-3" />
                 Analíticas avanzadas
               </span>
@@ -386,7 +386,7 @@ export default function AnalyticsPage() {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 px-4 py-2 text-sm font-medium text-white transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.3)]"
+              className="flex items-center gap-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 px-4 py-2 text-sm font-medium text-white transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.3)]"
             >
               <Download className="h-4 w-4" />
               Exportar
@@ -405,14 +405,14 @@ export default function AnalyticsPage() {
                   type="date"
                   value={dateRange}
                   onChange={(e) => setDateRange(e.target.value)}
-                  className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300 focus:border-indigo-500/50 focus:outline-none focus:ring-1 focus:ring-indigo-500/30 transition-all"
+                  className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300 focus:border-cyan-500/50 focus:outline-none focus:ring-1 focus:ring-cyan-500/30 transition-all"
                 />
                 <span className="text-slate-600 text-xs">hasta</span>
                 <input
                   type="date"
                   value={dateRangeEnd}
                   onChange={(e) => setDateRangeEnd(e.target.value)}
-                  className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300 focus:border-indigo-500/50 focus:outline-none focus:ring-1 focus:ring-indigo-500/30 transition-all"
+                  className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300 focus:border-cyan-500/50 focus:outline-none focus:ring-1 focus:ring-cyan-500/30 transition-all"
                 />
               </div>
             </div>
@@ -426,7 +426,7 @@ export default function AnalyticsPage() {
                   whileTap={{ scale: 0.96 }}
                   className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-all duration-200 ${
                     period === p.value
-                      ? "bg-indigo-600 text-white shadow-[0_0_12px_rgba(99,102,241,0.4)]"
+                      ? "bg-cyan-600 text-white shadow-[0_0_12px_rgba(99,102,241,0.4)]"
                       : "text-slate-400 hover:text-slate-200"
                   }`}
                 >
@@ -567,12 +567,12 @@ export default function AnalyticsPage() {
                   return (
                     <div key={s.source} className="flex items-center justify-between text-xs">
                       <div className="flex items-center gap-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
                         <span className="text-slate-400">{s.source}</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <span className="text-slate-500">{s.visitas.toLocaleString("es-ES")}</span>
-                        <span className="font-medium text-indigo-300 w-10 text-right">{pct}%</span>
+                        <span className="font-medium text-cyan-300 w-10 text-right">{pct}%</span>
                       </div>
                     </div>
                   );
@@ -615,10 +615,10 @@ export default function AnalyticsPage() {
                 </ScatterChart>
               </ResponsiveContainer>
 
-              <div className="mt-4 rounded-xl border border-indigo-500/15 bg-indigo-500/5 p-3">
+              <div className="mt-4 rounded-xl border border-cyan-500/15 bg-cyan-500/5 p-3">
                 <p className="text-xs text-slate-400 leading-relaxed">
                   Las sesiones de más de 60 segundos tienen una tasa de conversión promedio del
-                  <span className="font-semibold text-indigo-300"> 58.4%</span>, frente al
+                  <span className="font-semibold text-cyan-300"> 58.4%</span>, frente al
                   <span className="font-semibold text-rose-400"> 18.3%</span> de las sesiones cortas.
                 </p>
               </div>
@@ -703,7 +703,7 @@ export default function AnalyticsPage() {
                       transition={{ delay: i * 0.06, duration: 0.4, ease: "easeOut" }}
                       className="border-b border-white/5 hover:bg-white/3 transition-colors duration-150"
                     >
-                      <td className="px-6 py-3.5 font-mono text-xs text-indigo-300">{row.page}</td>
+                      <td className="px-6 py-3.5 font-mono text-xs text-cyan-300">{row.page}</td>
                       <td className="px-6 py-3.5 text-slate-300 font-medium">{row.visitas.toLocaleString("es-ES")}</td>
                       <td className="px-6 py-3.5 text-slate-400">{row.tiempo}</td>
                       <td className="px-6 py-3.5">
@@ -715,7 +715,7 @@ export default function AnalyticsPage() {
                         <div className="flex items-center gap-2">
                           <div className="h-1.5 w-20 rounded-full bg-white/10 overflow-hidden">
                             <div
-                              className="h-full rounded-full bg-indigo-500"
+                              className="h-full rounded-full bg-cyan-500"
                               style={{ width: row.conv }}
                             />
                           </div>

@@ -148,7 +148,7 @@ export default function HomePage() {
       <section className="relative min-h-[92vh] flex items-center">
         {/* Background glow */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-indigo-600/10 blur-[120px]" />
+          <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-cyan-600/10 blur-[120px]" />
           <div className="absolute top-1/3 -right-40 h-[400px] w-[400px] rounded-full bg-violet-600/8 blur-[100px]" />
           {/* Subtle grid */}
           <div
@@ -167,7 +167,7 @@ export default function HomePage() {
             {...(shouldReduce ? {} : { variants: staggerContainer, initial: "hidden", animate: "visible" })}
             className="space-y-8"
           >
-            <motion.div variants={fadeIn} className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-indigo-300 uppercase">
+            <motion.div variants={fadeIn} className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-cyan-300 uppercase">
               <Sparkles className="h-3 w-3" />
               {APP_TAGLINE}
             </motion.div>
@@ -177,7 +177,7 @@ export default function HomePage() {
               className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] text-balance"
             >
               Datos que{" "}
-              <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
                 impulsan
               </span>{" "}
               tu negocio
@@ -193,7 +193,7 @@ export default function HomePage() {
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
               <Link
                 href="/dashboard"
-                className="group inline-flex items-center gap-2 rounded-xl bg-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(99,102,241,0.35)] hover:bg-indigo-400 hover:shadow-[0_0_32px_rgba(99,102,241,0.5)] transition-all duration-300"
+                className="group inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(99,102,241,0.35)] hover:bg-cyan-400 hover:shadow-[0_0_32px_rgba(99,102,241,0.5)] transition-all duration-300"
               >
                 Ver el dashboard
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -230,7 +230,7 @@ export default function HomePage() {
               {/* Fake topbar */}
               <div className="flex items-center justify-between px-5 py-3 border-b border-white/8 bg-slate-800/60">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-indigo-400" />
+                  <Sparkles className="h-4 w-4 text-cyan-400" />
                   <span className="text-sm font-semibold text-white">{APP_NAME}</span>
                 </div>
                 <div className="flex gap-1.5">
@@ -300,11 +300,11 @@ export default function HomePage() {
                 key={k.id}
                 variants={scaleIn}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="rounded-2xl border border-white/8 bg-slate-800/50 p-5 shadow-[0_1px_2px_rgba(0,0,0,0.1),0_8px_24px_-8px_rgba(0,0,0,0.3)] hover:border-indigo-500/30 transition-all duration-300"
+                className="rounded-2xl border border-white/8 bg-slate-800/50 p-5 shadow-[0_1px_2px_rgba(0,0,0,0.1),0_8px_24px_-8px_rgba(0,0,0,0.3)] hover:border-cyan-500/30 transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-500/15 border border-indigo-500/20">
-                    <Icon className="h-4 w-4 text-indigo-400" />
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-500/15 border border-cyan-500/20">
+                    <Icon className="h-4 w-4 text-cyan-400" />
                   </div>
                   <span className="text-xs font-semibold text-emerald-400 bg-emerald-400/10 rounded-full px-2 py-0.5">
                     +{k.change}%
@@ -322,7 +322,7 @@ export default function HomePage() {
       <section id="features" className="py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div {...motionProps(fadeInUp)} className="mb-14 max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">Analíticas avanzadas</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3">Analíticas avanzadas</p>
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4">
               Todo lo que necesitas, en un solo lugar
             </h2>
@@ -343,7 +343,7 @@ export default function HomePage() {
                   <p className="text-xs text-slate-500 mt-0.5">Últimos 8 meses</p>
                 </div>
                 <div className="flex items-center gap-4 text-xs text-slate-500">
-                  <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-indigo-400" />Ingresos</span>
+                  <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-cyan-400" />Ingresos</span>
                   <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-violet-400" />Usuarios</span>
                 </div>
               </div>
@@ -439,7 +439,7 @@ export default function HomePage() {
       <section id="about" className="py-24 md:py-32 bg-slate-900/40 border-y border-white/8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div {...motionProps(fadeInUp)} className="text-center mb-16 max-w-2xl mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">Funcionalidades</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3">Funcionalidades</p>
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4">
               Construido para equipos que escalan
             </h2>
@@ -460,10 +460,10 @@ export default function HomePage() {
                   key={f.title}
                   variants={scaleIn}
                   whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                  className={`rounded-2xl border border-white/8 bg-slate-800/40 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_8px_24px_-8px_rgba(0,0,0,0.25)] hover:border-indigo-500/25 hover:bg-slate-800/60 transition-all duration-300 ${isLarge ? "lg:col-span-1" : ""}`}
+                  className={`rounded-2xl border border-white/8 bg-slate-800/40 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_8px_24px_-8px_rgba(0,0,0,0.25)] hover:border-cyan-500/25 hover:bg-slate-800/60 transition-all duration-300 ${isLarge ? "lg:col-span-1" : ""}`}
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/15 border border-indigo-500/20 mb-4">
-                    <Icon className="h-5 w-5 text-indigo-400" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/15 border border-cyan-500/20 mb-4">
+                    <Icon className="h-5 w-5 text-cyan-400" />
                   </div>
                   <h3 className="text-base font-semibold text-white mb-2">{f.title}</h3>
                   <p className="text-sm text-slate-400 leading-relaxed">{f.desc}</p>
@@ -478,7 +478,7 @@ export default function HomePage() {
       <section id="contact" className="py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div {...motionProps(fadeInUp)} className="mb-16 max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">Testimonios</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3">Testimonios</p>
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4">
               Equipos que ya confían en NovaDash
             </h2>
@@ -496,11 +496,11 @@ export default function HomePage() {
                 key={t.name}
                 variants={fadeInUp}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="rounded-2xl border border-white/8 bg-slate-900/60 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.3)] hover:border-indigo-500/20 transition-all duration-300"
+                className="rounded-2xl border border-white/8 bg-slate-900/60 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.3)] hover:border-cyan-500/20 transition-all duration-300"
               >
                 <div className="flex gap-0.5 mb-4">
                   {Array.from({ length: t.stars }).map((_, i) => (
-                    <Star key={i} className="h-3.5 w-3.5 fill-indigo-400 text-indigo-400" />
+                    <Star key={i} className="h-3.5 w-3.5 fill-cyan-400 text-cyan-400" />
                   ))}
                 </div>
                 <p className="text-sm text-slate-300 leading-relaxed mb-5 text-pretty">
@@ -530,7 +530,7 @@ export default function HomePage() {
       <section id="pricing" className="py-24 md:py-32 bg-slate-900/40 border-y border-white/8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div {...motionProps(fadeInUp)} className="text-center mb-16 max-w-xl mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">Precios</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3">Precios</p>
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4">
               Planes para cada etapa
             </h2>
@@ -550,12 +550,12 @@ export default function HomePage() {
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className={`relative rounded-2xl border p-7 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 ${
                   plan.highlighted
-                    ? "border-indigo-500/50 bg-indigo-500/10 shadow-[0_0_40px_rgba(99,102,241,0.15)]"
-                    : "border-white/8 bg-slate-900/60 hover:border-indigo-500/20"
+                    ? "border-cyan-500/50 bg-cyan-500/10 shadow-[0_0_40px_rgba(99,102,241,0.15)]"
+                    : "border-white/8 bg-slate-900/60 hover:border-cyan-500/20"
                 }`}
               >
                 {plan.highlighted && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-indigo-500 px-4 py-1 text-xs font-bold text-white tracking-wide shadow-[0_0_16px_rgba(99,102,241,0.5)]">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan-500 px-4 py-1 text-xs font-bold text-white tracking-wide shadow-[0_0_16px_rgba(99,102,241,0.5)]">
                     Más popular
                   </div>
                 )}
@@ -568,7 +568,7 @@ export default function HomePage() {
                 <ul className="space-y-2.5 mb-7">
                   {plan.features.map((feat) => (
                     <li key={feat} className="flex items-center gap-2.5 text-sm text-slate-300">
-                      <Check className="h-4 w-4 text-indigo-400 shrink-0" />
+                      <Check className="h-4 w-4 text-cyan-400 shrink-0" />
                       {feat}
                     </li>
                   ))}
@@ -577,7 +577,7 @@ export default function HomePage() {
                   href="/dashboard"
                   className={`flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
                     plan.highlighted
-                      ? "bg-indigo-500 text-white hover:bg-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:shadow-[0_0_28px_rgba(99,102,241,0.5)]"
+                      ? "bg-cyan-500 text-white hover:bg-cyan-400 shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:shadow-[0_0_28px_rgba(99,102,241,0.5)]"
                       : "border border-white/10 bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white"
                   }`}
                 >
@@ -595,14 +595,14 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             {...motionProps(scaleIn)}
-            className="relative rounded-3xl border border-indigo-500/25 bg-gradient-to-br from-indigo-500/10 via-slate-900/60 to-violet-500/10 p-12 md:p-16 text-center overflow-hidden shadow-[0_0_80px_rgba(99,102,241,0.12)]"
+            className="relative rounded-3xl border border-cyan-500/25 bg-gradient-to-br from-cyan-500/10 via-slate-900/60 to-violet-500/10 p-12 md:p-16 text-center overflow-hidden shadow-[0_0_80px_rgba(99,102,241,0.12)]"
           >
             {/* Glow */}
             <div className="pointer-events-none absolute inset-0">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-indigo-600/10 blur-[80px]" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-cyan-600/10 blur-[80px]" />
             </div>
             <div className="relative">
-              <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-indigo-300 uppercase mb-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-cyan-300 uppercase mb-6">
                 <Zap className="h-3 w-3" />
                 Empieza hoy
               </div>
@@ -615,7 +615,7 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Link
                   href="/dashboard"
-                  className="group inline-flex items-center gap-2 rounded-xl bg-indigo-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(99,102,241,0.4)] hover:bg-indigo-400 hover:shadow-[0_0_36px_rgba(99,102,241,0.55)] transition-all duration-300"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(99,102,241,0.4)] hover:bg-cyan-400 hover:shadow-[0_0_36px_rgba(99,102,241,0.55)] transition-all duration-300"
                 >
                   Ir al dashboard
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
