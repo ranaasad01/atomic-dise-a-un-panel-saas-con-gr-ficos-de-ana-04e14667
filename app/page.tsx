@@ -155,10 +155,10 @@ export default function HomePage() {
           className="pointer-events-none absolute inset-0 overflow-hidden"
           data-atomic-id="aa7fq3v">
           <div
-            className="absolute -top-32 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-rose-600/10 blur-[120px]"
+            className="absolute -top-32 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-amber-600/10 blur-[120px]"
             data-atomic-id="a4f0c3y" />
           <div
-            className="absolute top-1/3 -right-40 h-[400px] w-[400px] rounded-full bg-violet-600/8 blur-[100px]"
+            className="absolute top-1/3 -right-40 h-[400px] w-[400px] rounded-full bg-red-600/8 blur-[100px]"
             data-atomic-id="a4gf68g" />
           {/* Subtle grid */}
           <div
@@ -179,7 +179,7 @@ export default function HomePage() {
             {...(shouldReduce ? {} : { variants: staggerContainer, initial: "hidden", animate: "visible" })}
             className="space-y-8"
           >
-            <motion.div variants={fadeIn} className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-rose-300 uppercase">
+            <motion.div variants={fadeIn} className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-amber-300 uppercase">
               <Sparkles className="h-3 w-3" />
               {APP_TAGLINE}
             </motion.div>
@@ -190,7 +190,7 @@ export default function HomePage() {
             >
               Datos que{" "}
               <span
-                className="bg-gradient-to-r from-rose-400 to-violet-400 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-amber-400 to-red-400 bg-clip-text text-transparent"
                 data-atomic-id="ad6fwkr"
                 style={{
                   color: "#f59e0b"
@@ -210,7 +210,7 @@ export default function HomePage() {
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
               <Link
                 href="/dashboard"
-                className="group inline-flex items-center gap-2 rounded-xl bg-rose-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(99,102,241,0.35)] hover:bg-rose-400 hover:shadow-[0_0_32px_rgba(99,102,241,0.5)] transition-all duration-300"
+                className="group inline-flex items-center gap-2 rounded-xl bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(99,102,241,0.35)] hover:bg-amber-400 hover:shadow-[0_0_32px_rgba(99,102,241,0.5)] transition-all duration-300"
               >
                 Ver el dashboard
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -266,7 +266,7 @@ export default function HomePage() {
                 className="flex items-center justify-between px-5 py-3 border-b border-white/8 bg-slate-800/60"
                 data-atomic-id="ajjibem">
                 <div className="flex items-center gap-2" data-atomic-id="a1a1g91d">
-                  <Sparkles className="h-4 w-4 text-rose-400" />
+                  <Sparkles className="h-4 w-4 text-amber-400" />
                   <span className="text-sm font-semibold text-white" data-atomic-id="a124arth">{APP_NAME}</span>
                 </div>
                 <div className="flex gap-1.5" data-atomic-id="a1a2v35v">
@@ -298,7 +298,7 @@ export default function HomePage() {
                     data-atomic-id="ae3o7ya"
                     data-atomic-instance={__atomicIdx}>{k.value}</p>
                   <p
-                    className="text-xs text-rose-400 mt-0.5"
+                    className="text-xs text-amber-400 mt-0.5"
                     data-atomic-id="ae3o9ms"
                     data-atomic-instance={__atomicIdx}>+{k.change}%</p>
                 </div>))}
@@ -343,7 +343,7 @@ export default function HomePage() {
             >
               <div className="flex items-center gap-2" data-atomic-id="ax1ulz4">
                 <div
-                  className="h-2 w-2 rounded-full bg-rose-400 animate-pulse"
+                  className="h-2 w-2 rounded-full bg-amber-400 animate-pulse"
                   data-atomic-id="a1ovm70j" />
                 <span className="text-xs font-medium text-slate-300" data-atomic-id="alf47o4">Actualizado hace 2 min</span>
               </div>
@@ -366,20 +366,20 @@ export default function HomePage() {
                 key={k.id}
                 variants={scaleIn}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="rounded-2xl border border-white/8 bg-slate-800/50 p-5 shadow-[0_1px_2px_rgba(0,0,0,0.1),0_8px_24px_-8px_rgba(0,0,0,0.3)] hover:border-rose-500/30 transition-all duration-300"
+                className="rounded-2xl border border-white/8 bg-slate-800/50 p-5 shadow-[0_1px_2px_rgba(0,0,0,0.1),0_8px_24px_-8px_rgba(0,0,0,0.3)] hover:border-amber-500/30 transition-all duration-300"
               >
                 <div
                   className="flex items-start justify-between mb-3"
                   data-atomic-id="aa97gpk"
                   data-atomic-instance={__atomicIdx}>
                   <div
-                    className="flex h-9 w-9 items-center justify-center rounded-xl bg-rose-500/15 border border-rose-500/20"
+                    className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-500/15 border border-amber-500/20"
                     data-atomic-id="a158e5cr"
                     data-atomic-instance={__atomicIdx}>
-                    <Icon className="h-4 w-4 text-rose-400" />
+                    <Icon className="h-4 w-4 text-amber-400" />
                   </div>
                   <span
-                    className="text-xs font-semibold text-rose-400 bg-rose-400/10 rounded-full px-2 py-0.5"
+                    className="text-xs font-semibold text-amber-400 bg-amber-400/10 rounded-full px-2 py-0.5"
                     data-atomic-id="acer6ng"
                     data-atomic-instance={__atomicIdx}>
                     +{k.change}%
@@ -405,7 +405,7 @@ export default function HomePage() {
           data-atomic-id="a1gpjta0">
           <motion.div {...motionProps(fadeInUp)} className="mb-14 max-w-2xl">
             <p
-              className="text-xs font-semibold uppercase tracking-widest text-rose-400 mb-3"
+              className="text-xs font-semibold uppercase tracking-widest text-amber-400 mb-3"
               data-atomic-id="alvu4ff">Analíticas avanzadas</p>
             <h2
               className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4"
@@ -435,8 +435,8 @@ export default function HomePage() {
                 <div
                   className="flex items-center gap-4 text-xs text-slate-500"
                   data-atomic-id="a11y9gne">
-                  <span className="flex items-center gap-1.5" data-atomic-id="ai2ltng"><span className="h-2 w-2 rounded-full bg-rose-400" data-atomic-id="as4u3i6" />Ingresos</span>
-                  <span className="flex items-center gap-1.5" data-atomic-id="ajd7fry"><span className="h-2 w-2 rounded-full bg-violet-400" data-atomic-id="a12lfl1c" />Usuarios</span>
+                  <span className="flex items-center gap-1.5" data-atomic-id="ai2ltng"><span className="h-2 w-2 rounded-full bg-amber-400" data-atomic-id="as4u3i6" />Ingresos</span>
+                  <span className="flex items-center gap-1.5" data-atomic-id="ajd7fry"><span className="h-2 w-2 rounded-full bg-red-400" data-atomic-id="a12lfl1c" />Usuarios</span>
                 </div>
               </div>
               <ResponsiveContainer width="100%" height={220}>
@@ -541,7 +541,7 @@ export default function HomePage() {
                   <p className="text-xs text-slate-500 mt-0.5" data-atomic-id="af35obt">Comparativa mensual</p>
                 </div>
                 <span
-                  className="text-xs font-semibold text-rose-400 bg-rose-400/10 rounded-full px-3 py-1"
+                  className="text-xs font-semibold text-amber-400 bg-amber-400/10 rounded-full px-3 py-1"
                   data-atomic-id="anf35s8">
                   +18.4% vs año anterior
                 </span>
@@ -572,7 +572,7 @@ export default function HomePage() {
           data-atomic-id="a1u9axz0">
           <motion.div {...motionProps(fadeInUp)} className="text-center mb-16 max-w-2xl mx-auto">
             <p
-              className="text-xs font-semibold uppercase tracking-widest text-rose-400 mb-3"
+              className="text-xs font-semibold uppercase tracking-widest text-amber-400 mb-3"
               data-atomic-id="arsdoq7">Funcionalidades</p>
             <h2
               className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4"
@@ -598,13 +598,13 @@ export default function HomePage() {
                   key={f.title}
                   variants={scaleIn}
                   whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                  className={`rounded-2xl border border-white/8 bg-slate-800/40 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_8px_24px_-8px_rgba(0,0,0,0.25)] hover:border-rose-500/25 hover:bg-slate-800/60 transition-all duration-300 ${isLarge ? "lg:col-span-1" : ""}`}
+                  className={`rounded-2xl border border-white/8 bg-slate-800/40 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_8px_24px_-8px_rgba(0,0,0,0.25)] hover:border-amber-500/25 hover:bg-slate-800/60 transition-all duration-300 ${isLarge ? "lg:col-span-1" : ""}`}
                 >
                   <div
-                    className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-500/15 border border-rose-500/20 mb-4"
+                    className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/15 border border-amber-500/20 mb-4"
                     data-atomic-id="aplcbal"
                     data-atomic-instance={i}>
-                    <Icon className="h-5 w-5 text-rose-400" />
+                    <Icon className="h-5 w-5 text-amber-400" />
                   </div>
                   <h3
                     className="text-base font-semibold text-white mb-2"
@@ -627,7 +627,7 @@ export default function HomePage() {
           data-atomic-id="a8ry0ow">
           <motion.div {...motionProps(fadeInUp)} className="mb-16 max-w-xl">
             <p
-              className="text-xs font-semibold uppercase tracking-widest text-rose-400 mb-3"
+              className="text-xs font-semibold uppercase tracking-widest text-amber-400 mb-3"
               data-atomic-id="axox90z">Testimonios</p>
             <h2
               className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4"
@@ -647,14 +647,14 @@ export default function HomePage() {
               key={t.name}
               variants={fadeInUp}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="rounded-2xl border border-white/8 bg-slate-900/60 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.3)] hover:border-rose-500/20 transition-all duration-300"
+              className="rounded-2xl border border-white/8 bg-slate-900/60 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.3)] hover:border-amber-500/20 transition-all duration-300"
             >
               <div
                 className="flex gap-0.5 mb-4"
                 data-atomic-id="a15nrq0m"
                 data-atomic-instance={__atomicIdx}>
                 {Array.from({ length: t.stars }).map((_, i) => (
-                  <Star key={i} className="h-3.5 w-3.5 fill-rose-400 text-rose-400" />
+                  <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
                 ))}
               </div>
               <p
@@ -701,7 +701,7 @@ export default function HomePage() {
           data-atomic-id="at763ej">
           <motion.div {...motionProps(fadeInUp)} className="text-center mb-16 max-w-xl mx-auto">
             <p
-              className="text-xs font-semibold uppercase tracking-widest text-rose-400 mb-3"
+              className="text-xs font-semibold uppercase tracking-widest text-amber-400 mb-3"
               data-atomic-id="a2ih92m">Precios</p>
             <h2
               className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4"
@@ -723,13 +723,13 @@ export default function HomePage() {
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className={`relative rounded-2xl border p-7 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 ${
                 plan.highlighted
-                  ? "border-rose-500/50 bg-rose-500/10 shadow-[0_0_40px_rgba(99,102,241,0.15)]"
-                  : "border-white/8 bg-slate-900/60 hover:border-rose-500/20"
+                  ? "border-amber-500/50 bg-amber-500/10 shadow-[0_0_40px_rgba(99,102,241,0.15)]"
+                  : "border-white/8 bg-slate-900/60 hover:border-amber-500/20"
               }`}
             >
               {plan.highlighted && (
                 <div
-                  className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-rose-500 px-4 py-1 text-xs font-bold text-white tracking-wide shadow-[0_0_16px_rgba(99,102,241,0.5)]"
+                  className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-amber-500 px-4 py-1 text-xs font-bold text-white tracking-wide shadow-[0_0_16px_rgba(99,102,241,0.5)]"
                   data-atomic-id="a1x3r8ot"
                   data-atomic-instance={__atomicIdx}>
                   Más popular
@@ -765,7 +765,7 @@ export default function HomePage() {
                   className="flex items-center gap-2.5 text-sm text-slate-300"
                   data-atomic-id="a29maqh"
                   data-atomic-instance={__atomicIdx}>
-                  <Check className="h-4 w-4 text-rose-400 shrink-0" />
+                  <Check className="h-4 w-4 text-amber-400 shrink-0" />
                   {feat}
                 </li>))}
               </ul>
@@ -773,7 +773,7 @@ export default function HomePage() {
                 href="/dashboard"
                 className={`flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
                   plan.highlighted
-                    ? "bg-rose-500 text-white hover:bg-rose-400 shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:shadow-[0_0_28px_rgba(99,102,241,0.5)]"
+                    ? "bg-amber-500 text-white hover:bg-amber-400 shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:shadow-[0_0_28px_rgba(99,102,241,0.5)]"
                     : "border border-white/10 bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white"
                 }`}
               >
@@ -791,17 +791,17 @@ export default function HomePage() {
           data-atomic-id="a16qx83j">
           <motion.div
             {...motionProps(scaleIn)}
-            className="relative rounded-3xl border border-rose-500/25 bg-gradient-to-br from-rose-500/10 via-slate-900/60 to-violet-500/10 p-12 md:p-16 text-center overflow-hidden shadow-[0_0_80px_rgba(99,102,241,0.12)]"
+            className="relative rounded-3xl border border-amber-500/25 bg-gradient-to-br from-amber-500/10 via-slate-900/60 to-red-500/10 p-12 md:p-16 text-center overflow-hidden shadow-[0_0_80px_rgba(99,102,241,0.12)]"
           >
             {/* Glow */}
             <div className="pointer-events-none absolute inset-0" data-atomic-id="a3hk207">
               <div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-rose-600/10 blur-[80px]"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-amber-600/10 blur-[80px]"
                 data-atomic-id="a1ll1zbe" />
             </div>
             <div className="relative" data-atomic-id="a3iyw4p">
               <div
-                className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-rose-300 uppercase mb-6"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-amber-300 uppercase mb-6"
                 data-atomic-id="a1scxjnw">
                 <Zap className="h-3 w-3" />
                 Empieza hoy
@@ -821,7 +821,7 @@ export default function HomePage() {
                 data-atomic-id="a1sh621e">
                 <Link
                   href="/dashboard"
-                  className="group inline-flex items-center gap-2 rounded-xl bg-rose-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(99,102,241,0.4)] hover:bg-rose-400 hover:shadow-[0_0_36px_rgba(99,102,241,0.55)] transition-all duration-300"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-amber-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(99,102,241,0.4)] hover:bg-amber-400 hover:shadow-[0_0_36px_rgba(99,102,241,0.55)] transition-all duration-300"
                 >
                   Ir al dashboard
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />

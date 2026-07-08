@@ -58,8 +58,8 @@ export default function Footer() {
           {/* Brand */}
           <motion.div variants={fadeInUp} className="space-y-3">
             <Link href="/" className="flex items-center gap-2 group w-fit">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-rose-500/20 border border-rose-500/30 group-hover:bg-rose-500/30 transition-all duration-300">
-                <Sparkles className="h-3.5 w-3.5 text-rose-400" />
+              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-amber-500/20 border border-amber-500/30 group-hover:bg-amber-500/30 transition-all duration-300">
+                <Sparkles className="h-3.5 w-3.5 text-amber-400" />
               </div>
               <span className="text-base font-bold tracking-tight text-white">
                 {APP_NAME}
@@ -98,7 +98,7 @@ export default function Footer() {
                     link.href,
                     link.type,
                     link.label,
-                    "text-sm text-slate-400 hover:text-rose-300 transition-colors duration-200"
+                    "text-sm text-slate-400 hover:text-amber-300 transition-colors duration-200"
                   )}
                 </li>
               ))}
@@ -120,7 +120,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-sm text-slate-400 hover:text-rose-300 transition-colors duration-200"
+                    className="text-sm text-slate-400 hover:text-amber-300 transition-colors duration-200"
                   >
                     {item.label}
                   </Link>
