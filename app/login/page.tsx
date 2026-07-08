@@ -57,8 +57,8 @@ export default function LoginPage() {
         >
           {/* Logo */}
           <motion.div variants={fadeInUp} className="flex flex-col items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/20 border border-amber-500/30">
-              <Sparkles className="h-5 w-5 text-amber-400" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-sky-500/20 border border-sky-500/30">
+              <Sparkles className="h-5 w-5 text-sky-400" />
             </div>
             <span className="text-lg font-bold text-white tracking-tight">{APP_NAME}</span>
           </motion.div>
@@ -108,7 +108,7 @@ export default function LoginPage() {
               <motion.p
                 initial={{ opacity: 0, y: -4 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-sm text-red-400 text-center"
+                className="text-sm text-sky-400 text-center"
               >
                 {error}
               </motion.p>

@@ -80,9 +80,9 @@ const PLAN_COLORS: Record<Plan, string> = {
 };
 
 const ESTADO_CONFIG: Record<Estado, { label: string; color: string; bg: string }> = {
-  activo: { label: "Activo", color: "text-amber-400", bg: "bg-amber-400/10 border-amber-400/20" },
+  activo: { label: "Activo", color: "text-sky-400", bg: "bg-sky-400/10 border-sky-400/20" },
   inactivo: { label: "Inactivo", color: "text-slate-400", bg: "bg-slate-400/10 border-slate-400/20" },
-  pendiente: { label: "Pendiente", color: "text-amber-400", bg: "bg-amber-400/10 border-amber-400/20" },
+  pendiente: { label: "Pendiente", color: "text-sky-400", bg: "bg-sky-400/10 border-sky-400/20" },
 };
 
 type SortKey = "nombre" | "plan" | "estado" | "fechaRegistro" | "mrr";
@@ -94,15 +94,15 @@ const PAGE_SIZE = 8;
 
 function avatarColor(initials: string): string {
   const colors = [
-    "from-amber-500 to-red-600",
-    "from-red-500 to-purple-600",
+    "from-sky-500 to-sky-600",
+    "from-sky-500 to-purple-600",
     "from-purple-500 to-fuchsia-600",
     "from-fuchsia-500 to-pink-600",
-    "from-sky-500 to-amber-600",
-    "from-teal-500 to-amber-600",
+    "from-sky-500 to-sky-600",
+    "from-teal-500 to-sky-600",
   ];
   const idx = (initials.charCodeAt(0) + (initials.charCodeAt(1) ?? 0)) % colors.length;
-  return colors[idx] ?? "from-amber-500 to-red-600";
+  return colors[idx] ?? "from-sky-500 to-sky-600";
 }
 
 function formatMRR(val: number): string {
@@ -269,16 +269,16 @@ export default function UsersPage() {
   function SortIcon({ col }: { col: SortKey }) {
     if (sortKey !== col) return <ArrowUpDown className="h-3 w-3 text-slate-600" />;
     return sortDir === "asc"
-      ? <ArrowUp className="h-3 w-3 text-amber-400" />
-      : <ArrowDown className="h-3 w-3 text-amber-400" />;
+      ? <ArrowUp className="h-3 w-3 text-sky-400" />
+      : <ArrowDown className="h-3 w-3 text-sky-400" />;
   }
 
   return (
     <div className="min-h-screen bg-[#0A0F1E] text-slate-100">
       {/* Ambient glow */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-amber-600/10 blur-3xl" />
-        <div className="absolute top-1/3 right-1/4 h-64 w-64 rounded-full bg-red-600/8 blur-3xl" />
+        <div className="absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-sky-600/10 blur-3xl" />
+        <div className="absolute top-1/3 right-1/4 h-64 w-64 rounded-full bg-sky-600/8 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
@@ -292,7 +292,7 @@ export default function UsersPage() {
         >
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-amber-400 mb-1">
+              <p className="text-xs font-semibold uppercase tracking-widest text-sky-400 mb-1">
                 {t("users.section_label") || "Gestión de Usuarios"}
               </p>
               <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
@@ -305,7 +305,7 @@ export default function UsersPage() {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500/20 border border-amber-500/30 text-amber-300 text-sm font-medium hover:bg-amber-500/30 transition-all duration-200 self-start sm:self-auto"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-500/20 border border-sky-500/30 text-sky-300 text-sm font-medium hover:bg-sky-500/30 transition-all duration-200 self-start sm:self-auto"
             >
               <Download className="h-4 w-4" />
               {t("users.export") || "Exportar CSV"}
@@ -356,7 +356,7 @@ export default function UsersPage() {
                   value={search}
                   onChange={(e) => { setSearch(e.target.value); setPage(1); }}
                   placeholder={t("users.search_placeholder") || "Buscar por nombre o email..."}
-                  className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500/50 focus:bg-white/8 transition-all duration-200"
+                  className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-sky-500/50 focus:bg-white/8 transition-all duration-200"
                 />
               </div>
 
@@ -365,7 +365,7 @@ export default function UsersPage() {
                 <select
                   value={planFilter}
                   onChange={(e) => { setPlanFilter(e.target.value as Plan | "Todos"); setPage(1); }}
-                  className="appearance-none pl-3 pr-8 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm text-slate-300 focus:outline-none focus:border-amber-500/50 transition-all duration-200 cursor-pointer"
+                  className="appearance-none pl-3 pr-8 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm text-slate-300 focus:outline-none focus:border-sky-500/50 transition-all duration-200 cursor-pointer"
                 >
                   <option value="Todos">Todos los planes</option>
                   <option value="Free">Free</option>
@@ -381,7 +381,7 @@ export default function UsersPage() {
                 <select
                   value={estadoFilter}
                   onChange={(e) => { setEstadoFilter(e.target.value as Estado | "Todos"); setPage(1); }}
-                  className="appearance-none pl-3 pr-8 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm text-slate-300 focus:outline-none focus:border-amber-500/50 transition-all duration-200 cursor-pointer"
+                  className="appearance-none pl-3 pr-8 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm text-slate-300 focus:outline-none focus:border-sky-500/50 transition-all duration-200 cursor-pointer"
                 >
                   <option value="Todos">Todos los estados</option>
                   <option value="activo">Activo</option>
@@ -435,7 +435,7 @@ export default function UsersPage() {
                             transition={{ duration: 0.25, delay: idx * 0.03 }}
                             className={`border-b border-white/5 transition-colors duration-150 ${
                               isSelected
-                                ? "bg-amber-500/10"
+                                ? "bg-sky-500/10"
                                 : "hover:bg-white/4"
                             }`}
                           >
@@ -496,8 +496,8 @@ export default function UsersPage() {
                                 onClick={() => setSelectedUser(isSelected ? null : user)}
                                 className={`flex h-7 w-7 items-center justify-center rounded-lg border transition-all duration-200 ${
                                   isSelected
-                                    ? "border-amber-500/50 bg-amber-500/20 text-amber-300"
-                                    : "border-white/10 bg-white/5 text-slate-400 hover:text-amber-300 hover:border-amber-500/30"
+                                    ? "border-sky-500/50 bg-sky-500/20 text-sky-300"
+                                    : "border-white/10 bg-white/5 text-slate-400 hover:text-sky-300 hover:border-sky-500/30"
                                 }`}
                                 aria-label="Ver usuario"
                               >
@@ -544,7 +544,7 @@ export default function UsersPage() {
                       onClick={() => setPage(p)}
                       className={`flex h-7 w-7 items-center justify-center rounded-lg text-xs font-medium transition-all duration-200 ${
                         p === page
-                          ? "bg-amber-500/30 border border-amber-500/50 text-amber-300"
+                          ? "bg-sky-500/30 border border-sky-500/50 text-sky-300"
                           : "border border-white/10 bg-white/5 text-slate-400 hover:text-slate-100 hover:bg-white/10"
                       }`}
                     >
@@ -638,7 +638,7 @@ export default function UsersPage() {
                     <div className="pt-2 border-t border-white/8">
                       <div className="flex items-center justify-between">
                         <span className="text-xs text-slate-500">MRR mensual</span>
-                        <span className="text-base font-bold text-amber-300">{formatMRR(selectedUser.mrr)}</span>
+                        <span className="text-base font-bold text-sky-300">{formatMRR(selectedUser.mrr)}</span>
                       </div>
                     </div>
                   </div>
@@ -692,7 +692,7 @@ export default function UsersPage() {
               <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-1">
                 Crecimiento de usuarios
               </p>
-              <p className="text-2xl font-bold text-white mb-3">940 <span className="text-sm font-normal text-amber-400">+18.4%</span></p>
+              <p className="text-2xl font-bold text-white mb-3">940 <span className="text-sm font-normal text-sky-400">+18.4%</span></p>
               <GrowthBar data={GROWTH_DATA} />
             </motion.div>
           </motion.div>
