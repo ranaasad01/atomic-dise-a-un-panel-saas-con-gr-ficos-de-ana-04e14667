@@ -143,13 +143,23 @@ export default function HomePage() {
       : { variants, initial: "hidden", whileInView: "visible", viewport: { once: true, margin: "-80px" } };
 
   return (
-    <main className="overflow-x-hidden bg-[#0F172A] text-slate-100">
+    <main
+      className="overflow-x-hidden bg-[#0F172A] text-slate-100"
+      data-atomic-id="a1o3b4zn">
       {/* ── HERO ── */}
-      <section className="relative min-h-[92vh] flex items-center">
+      <section
+        className="relative min-h-[92vh] flex items-center"
+        data-atomic-id="a1dy22go">
         {/* Background glow */}
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-cyan-600/10 blur-[120px]" />
-          <div className="absolute top-1/3 -right-40 h-[400px] w-[400px] rounded-full bg-violet-600/8 blur-[100px]" />
+        <div
+          className="pointer-events-none absolute inset-0 overflow-hidden"
+          data-atomic-id="aa7fq3v">
+          <div
+            className="absolute -top-32 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-cyan-600/10 blur-[120px]"
+            data-atomic-id="a4f0c3y" />
+          <div
+            className="absolute top-1/3 -right-40 h-[400px] w-[400px] rounded-full bg-violet-600/8 blur-[100px]"
+            data-atomic-id="a4gf68g" />
           {/* Subtle grid */}
           <div
             className="absolute inset-0 opacity-[0.03]"
@@ -158,10 +168,12 @@ export default function HomePage() {
                 "linear-gradient(rgba(99,102,241,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.5) 1px, transparent 1px)",
               backgroundSize: "60px 60px",
             }}
-          />
+            data-atomic-id="a4j8uhg" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 grid lg:grid-cols-2 gap-16 items-center">
+        <div
+          className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 grid lg:grid-cols-2 gap-16 items-center"
+          data-atomic-id="aa8uk8d">
           {/* Left copy */}
           <motion.div
             {...(shouldReduce ? {} : { variants: staggerContainer, initial: "hidden", animate: "visible" })}
@@ -177,7 +189,12 @@ export default function HomePage() {
               className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] text-balance"
             >
               Datos que{" "}
-              <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
+              <span
+                className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent"
+                data-atomic-id="ad6fwkr"
+                style={{
+                  color: "#f59e0b"
+                }}>
                 impulsan
               </span>{" "}
               tu negocio
@@ -212,12 +229,20 @@ export default function HomePage() {
                 { label: "Empresas activas", value: "2,400+" },
                 { label: "Uptime garantizado", value: "99.9%" },
                 { label: "Soporte", value: "24/7" },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <p className="text-xl font-bold text-white">{stat.value}</p>
-                  <p className="text-xs text-slate-500 mt-0.5">{stat.label}</p>
-                </div>
-              ))}
+              ].map((stat, __atomicIdx) => (<div
+                key={stat.label}
+                className="text-center"
+                data-atomic-id="a1a63l63"
+                data-atomic-instance={__atomicIdx}>
+                <p
+                  className="text-xl font-bold text-white"
+                  data-atomic-id="aeuyly3"
+                  data-atomic-instance={__atomicIdx}>{stat.value}</p>
+                <p
+                  className="text-xs text-slate-500 mt-0.5"
+                  data-atomic-id="aeuynml"
+                  data-atomic-instance={__atomicIdx}>{stat.label}</p>
+              </div>))}
             </motion.div>
           </motion.div>
 
@@ -226,41 +251,72 @@ export default function HomePage() {
             {...(shouldReduce ? {} : { variants: scaleIn, initial: "hidden", animate: "visible" })}
             className="relative"
           >
-            <div className="rounded-2xl border border-white/10 bg-slate-900/80 backdrop-blur-xl shadow-[0_8px_64px_rgba(0,0,0,0.5)] overflow-hidden">
+            <div
+              className="rounded-2xl border border-white/10 bg-slate-900/80 backdrop-blur-xl shadow-[0_8px_64px_rgba(0,0,0,0.5)] overflow-hidden"
+              data-atomic-id="a1wfhy1l">
               {/* Fake topbar */}
-              <div className="flex items-center justify-between px-5 py-3 border-b border-white/8 bg-slate-800/60">
-                <div className="flex items-center gap-2">
+              <div
+                className="flex items-center justify-between px-5 py-3 border-b border-white/8 bg-slate-800/60"
+                data-atomic-id="ajjibem">
+                <div className="flex items-center gap-2" data-atomic-id="a1a1g91d">
                   <Sparkles className="h-4 w-4 text-cyan-400" />
-                  <span className="text-sm font-semibold text-white">{APP_NAME}</span>
+                  <span className="text-sm font-semibold text-white" data-atomic-id="a124arth">{APP_NAME}</span>
                 </div>
-                <div className="flex gap-1.5">
-                  <span className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/70" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-green-500/70" />
+                <div className="flex gap-1.5" data-atomic-id="a1a2v35v">
+                  <span
+                    className="h-2.5 w-2.5 rounded-full bg-red-500/70"
+                    data-atomic-id="a1baan85" />
+                  <span
+                    className="h-2.5 w-2.5 rounded-full bg-yellow-500/70"
+                    data-atomic-id="a1ckw9cn" />
+                  <span
+                    className="h-2.5 w-2.5 rounded-full bg-green-500/70"
+                    data-atomic-id="a1dvhvh5" />
                 </div>
               </div>
 
               {/* KPI row */}
-              <div className="grid grid-cols-2 gap-3 p-4">
-                {kpis.slice(0, 2).map((k) => (
-                  <div key={k.id} className="rounded-xl border border-white/8 bg-slate-800/50 p-3">
-                    <p className="text-xs text-slate-500 mb-1">{k.label}</p>
-                    <p className="text-lg font-bold text-white">{k.value}</p>
-                    <p className="text-xs text-emerald-400 mt-0.5">+{k.change}%</p>
-                  </div>
-                ))}
+              <div className="grid grid-cols-2 gap-3 p-4" data-atomic-id="ajmbznm">
+                {kpis.slice(0, 2).map((k, __atomicIdx) => (<div
+                  key={k.id}
+                  className="rounded-xl border border-white/8 bg-slate-800/50 p-3"
+                  data-atomic-id="a1yhiq28"
+                  data-atomic-instance={__atomicIdx}>
+                  <p
+                    className="text-xs text-slate-500 mb-1"
+                    data-atomic-id="ae3o69s"
+                    data-atomic-instance={__atomicIdx}>{k.label}</p>
+                  <p
+                    className="text-lg font-bold text-white"
+                    data-atomic-id="ae3o7ya"
+                    data-atomic-instance={__atomicIdx}>{k.value}</p>
+                  <p
+                    className="text-xs text-emerald-400 mt-0.5"
+                    data-atomic-id="ae3o9ms"
+                    data-atomic-instance={__atomicIdx}>+{k.change}%</p>
+                </div>))}
               </div>
 
               {/* Mini chart */}
-              <div className="px-4 pb-4">
-                <div className="rounded-xl border border-white/8 bg-slate-800/50 p-3">
-                  <p className="text-xs text-slate-500 mb-3">Ingresos — últimos 8 meses</p>
+              <div className="px-4 pb-4" data-atomic-id="a4jo0j1">
+                <div
+                  className="rounded-xl border border-white/8 bg-slate-800/50 p-3"
+                  data-atomic-id="aszpuj4">
+                  <p className="text-xs text-slate-500 mb-3" data-atomic-id="a1d3331c">Ingresos — últimos 8 meses</p>
                   <ResponsiveContainer width="100%" height={120}>
                     <AreaChart data={revenueData} margin={{ top: 0, right: 0, left: -30, bottom: 0 }}>
-                      <defs>
-                        <linearGradient id="heroGrad" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="5%" stopColor="#6366F1" stopOpacity={0.4} />
-                          <stop offset="95%" stopColor="#6366F1" stopOpacity={0} />
+                      <defs data-atomic-id="azdqf5m">
+                        <linearGradient id="heroGrad" x1="0" y1="0" x2="0" y2="1" data-atomic-id="asacgw4">
+                          <stop
+                            offset="5%"
+                            stopColor="#6366F1"
+                            stopOpacity={0.4}
+                            data-atomic-id="a1nskubo" />
+                          <stop
+                            offset="95%"
+                            stopColor="#6366F1"
+                            stopOpacity={0}
+                            data-atomic-id="a1p36gg6" />
                         </linearGradient>
                       </defs>
                       <XAxis dataKey="name" tick={{ fontSize: 9, fill: "#64748b" }} axisLine={false} tickLine={false} />
@@ -278,22 +334,25 @@ export default function HomePage() {
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -bottom-4 -left-6 rounded-xl border border-white/10 bg-slate-800/90 backdrop-blur-xl px-4 py-2.5 shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
             >
-              <div className="flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-xs font-medium text-slate-300">Actualizado hace 2 min</span>
+              <div className="flex items-center gap-2" data-atomic-id="ax1ulz4">
+                <div
+                  className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"
+                  data-atomic-id="a1ovm70j" />
+                <span className="text-xs font-medium text-slate-300" data-atomic-id="alf47o4">Actualizado hace 2 min</span>
               </div>
             </motion.div>
           </motion.div>
         </div>
       </section>
-
       {/* ── KPI STRIP ── */}
-      <section className="border-y border-white/8 bg-slate-900/40">
+      <section
+        className="border-y border-white/8 bg-slate-900/40"
+        data-atomic-id="a1160r24">
         <motion.div
           {...motionProps(staggerContainer)}
           className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {kpis.map((k) => {
+          {kpis.map((k, __atomicIdx) => {
             const Icon = k.icon;
             return (
               <motion.div
@@ -302,61 +361,103 @@ export default function HomePage() {
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className="rounded-2xl border border-white/8 bg-slate-800/50 p-5 shadow-[0_1px_2px_rgba(0,0,0,0.1),0_8px_24px_-8px_rgba(0,0,0,0.3)] hover:border-cyan-500/30 transition-all duration-300"
               >
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-500/15 border border-cyan-500/20">
+                <div
+                  className="flex items-start justify-between mb-3"
+                  data-atomic-id="aa97gpk"
+                  data-atomic-instance={__atomicIdx}>
+                  <div
+                    className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-500/15 border border-cyan-500/20"
+                    data-atomic-id="a158e5cr"
+                    data-atomic-instance={__atomicIdx}>
                     <Icon className="h-4 w-4 text-cyan-400" />
                   </div>
-                  <span className="text-xs font-semibold text-emerald-400 bg-emerald-400/10 rounded-full px-2 py-0.5">
+                  <span
+                    className="text-xs font-semibold text-emerald-400 bg-emerald-400/10 rounded-full px-2 py-0.5"
+                    data-atomic-id="acer6ng"
+                    data-atomic-instance={__atomicIdx}>
                     +{k.change}%
                   </span>
                 </div>
-                <p className="text-2xl font-bold text-white tracking-tight">{k.value}</p>
-                <p className="text-xs text-slate-500 mt-1">{k.label}</p>
+                <p
+                  className="text-2xl font-bold text-white tracking-tight"
+                  data-atomic-id="au2tsx3"
+                  data-atomic-instance={__atomicIdx}>{k.value}</p>
+                <p
+                  className="text-xs text-slate-500 mt-1"
+                  data-atomic-id="au2tull"
+                  data-atomic-instance={__atomicIdx}>{k.label}</p>
               </motion.div>
             );
           })}
         </motion.div>
       </section>
-
       {/* ── CHARTS SECTION ── */}
-      <section id="features" className="py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section id="features" className="py-24 md:py-32" data-atomic-id="a1uhewo7">
+        <div
+          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+          data-atomic-id="a1gpjta0">
           <motion.div {...motionProps(fadeInUp)} className="mb-14 max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3">Analíticas avanzadas</p>
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4">
+            <p
+              className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3"
+              data-atomic-id="alvu4ff">Analíticas avanzadas</p>
+            <h2
+              className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4"
+              data-atomic-id="abvj1o7">
               Todo lo que necesitas, en un solo lugar
             </h2>
-            <p className="text-slate-400 leading-relaxed text-pretty">
+            <p
+              className="text-slate-400 leading-relaxed text-pretty"
+              data-atomic-id="alvu7sf">
               Desde ingresos hasta comportamiento de usuarios, NovaDash convierte datos complejos en visualizaciones claras que cualquier miembro del equipo puede entender.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-6">
+          <div className="grid lg:grid-cols-3 gap-6" data-atomic-id="a1ul8chp">
             {/* Area chart — wide */}
             <motion.div
               {...motionProps(slideInLeft)}
               className="lg:col-span-2 rounded-2xl border border-white/8 bg-slate-900/60 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.35)]"
             >
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h3 className="text-base font-semibold text-white">Ingresos y Usuarios</h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Últimos 8 meses</p>
+              <div
+                className="flex items-center justify-between mb-6"
+                data-atomic-id="ayud65h">
+                <div data-atomic-id="a11wumiw">
+                  <h3 className="text-base font-semibold text-white" data-atomic-id="asg1a83">Ingresos y Usuarios</h3>
+                  <p className="text-xs text-slate-500 mt-0.5" data-atomic-id="adryn2y">Últimos 8 meses</p>
                 </div>
-                <div className="flex items-center gap-4 text-xs text-slate-500">
-                  <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-cyan-400" />Ingresos</span>
-                  <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-violet-400" />Usuarios</span>
+                <div
+                  className="flex items-center gap-4 text-xs text-slate-500"
+                  data-atomic-id="a11y9gne">
+                  <span className="flex items-center gap-1.5" data-atomic-id="ai2ltng"><span className="h-2 w-2 rounded-full bg-cyan-400" data-atomic-id="as4u3i6" />Ingresos</span>
+                  <span className="flex items-center gap-1.5" data-atomic-id="ajd7fry"><span className="h-2 w-2 rounded-full bg-violet-400" data-atomic-id="a12lfl1c" />Usuarios</span>
                 </div>
               </div>
               <ResponsiveContainer width="100%" height={220}>
                 <AreaChart data={revenueData} margin={{ top: 4, right: 4, left: -20, bottom: 0 }}>
-                  <defs>
-                    <linearGradient id="ingGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#6366F1" stopOpacity={0.35} />
-                      <stop offset="95%" stopColor="#6366F1" stopOpacity={0} />
+                  <defs data-atomic-id="a91t5jg">
+                    <linearGradient id="ingGrad" x1="0" y1="0" x2="0" y2="1" data-atomic-id="a1q781cm">
+                      <stop
+                        offset="5%"
+                        stopColor="#6366F1"
+                        stopOpacity={0.35}
+                        data-atomic-id="a16fppue" />
+                      <stop
+                        offset="95%"
+                        stopColor="#6366F1"
+                        stopOpacity={0}
+                        data-atomic-id="a17qbbyw" />
                     </linearGradient>
-                    <linearGradient id="usrGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#8B5CF6" stopOpacity={0.3} />
-                      <stop offset="95%" stopColor="#8B5CF6" stopOpacity={0} />
+                    <linearGradient id="usrGrad" x1="0" y1="0" x2="0" y2="1" data-atomic-id="a1wz3lp4">
+                      <stop
+                        offset="5%"
+                        stopColor="#8B5CF6"
+                        stopOpacity={0.3}
+                        data-atomic-id="a1gwb7dk" />
+                      <stop
+                        offset="95%"
+                        stopColor="#8B5CF6"
+                        stopOpacity={0}
+                        data-atomic-id="a1i6wti2" />
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" />
@@ -377,8 +478,10 @@ export default function HomePage() {
               {...motionProps(slideInRight)}
               className="rounded-2xl border border-white/8 bg-slate-900/60 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.35)]"
             >
-              <h3 className="text-base font-semibold text-white mb-1">Canales de tráfico</h3>
-              <p className="text-xs text-slate-500 mb-4">Distribución actual</p>
+              <h3
+                className="text-base font-semibold text-white mb-1"
+                data-atomic-id="a1rvy8o1">Canales de tráfico</h3>
+              <p className="text-xs text-slate-500 mb-4" data-atomic-id="apm2fp4">Distribución actual</p>
               <ResponsiveContainer width="100%" height={160}>
                 <PieChart>
                   <Pie data={channelData} cx="50%" cy="50%" innerRadius={48} outerRadius={72} paddingAngle={3} dataKey="value">
@@ -391,14 +494,28 @@ export default function HomePage() {
                   />
                 </PieChart>
               </ResponsiveContainer>
-              <ul className="mt-3 space-y-2">
+              <ul className="mt-3 space-y-2" data-atomic-id="a1rw2vf1">
                 {channelData.map((ch, i) => (
-                  <li key={ch.name} className="flex items-center justify-between text-xs">
-                    <span className="flex items-center gap-2 text-slate-400">
-                      <span className="h-2 w-2 rounded-full" style={{ background: CHANNEL_COLORS[i] }} />
+                  <li
+                    key={ch.name}
+                    className="flex items-center justify-between text-xs"
+                    data-atomic-id="al3t3jj"
+                    data-atomic-instance={i}>
+                    <span
+                      className="flex items-center gap-2 text-slate-400"
+                      data-atomic-id="a644pu7"
+                      data-atomic-instance={i}>
+                      <span
+                        className="h-2 w-2 rounded-full"
+                        style={{ background: CHANNEL_COLORS[i] }}
+                        data-atomic-id="a3cg0vm"
+                        data-atomic-instance={i} />
                       {ch.name}
                     </span>
-                    <span className="font-semibold text-white">{ch.value}%</span>
+                    <span
+                      className="font-semibold text-white"
+                      data-atomic-id="a7eqbyp"
+                      data-atomic-instance={i}>{ch.value}%</span>
                   </li>
                 ))}
               </ul>
@@ -409,12 +526,16 @@ export default function HomePage() {
               {...motionProps(fadeInUp)}
               className="lg:col-span-3 rounded-2xl border border-white/8 bg-slate-900/60 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.35)]"
             >
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h3 className="text-base font-semibold text-white">Ingresos por mes</h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Comparativa mensual</p>
+              <div
+                className="flex items-center justify-between mb-6"
+                data-atomic-id="aengh6c">
+                <div data-atomic-id="a19vdnzr">
+                  <h3 className="text-base font-semibold text-white" data-atomic-id="aoddde">Ingresos por mes</h3>
+                  <p className="text-xs text-slate-500 mt-0.5" data-atomic-id="af35obt">Comparativa mensual</p>
                 </div>
-                <span className="text-xs font-semibold text-emerald-400 bg-emerald-400/10 rounded-full px-3 py-1">
+                <span
+                  className="text-xs font-semibold text-emerald-400 bg-emerald-400/10 rounded-full px-3 py-1"
+                  data-atomic-id="anf35s8">
                   +18.4% vs año anterior
                 </span>
               </div>
@@ -434,16 +555,26 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* ── FEATURES GRID ── */}
-      <section id="about" className="py-24 md:py-32 bg-slate-900/40 border-y border-white/8">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section
+        id="about"
+        className="py-24 md:py-32 bg-slate-900/40 border-y border-white/8"
+        data-atomic-id="a1hpdl9n">
+        <div
+          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+          data-atomic-id="a1u9axz0">
           <motion.div {...motionProps(fadeInUp)} className="text-center mb-16 max-w-2xl mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3">Funcionalidades</p>
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4">
+            <p
+              className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3"
+              data-atomic-id="arsdoq7">Funcionalidades</p>
+            <h2
+              className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4"
+              data-atomic-id="a1sn8jln">
               Construido para equipos que escalan
             </h2>
-            <p className="text-slate-400 leading-relaxed text-pretty">
+            <p
+              className="text-slate-400 leading-relaxed text-pretty"
+              data-atomic-id="arsds37">
               Cada función de NovaDash fue diseñada para reducir el tiempo entre los datos y la acción.
             </p>
           </motion.div>
@@ -462,27 +593,41 @@ export default function HomePage() {
                   whileHover={{ y: -4, transition: { duration: 0.2 } }}
                   className={`rounded-2xl border border-white/8 bg-slate-800/40 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_8px_24px_-8px_rgba(0,0,0,0.25)] hover:border-cyan-500/25 hover:bg-slate-800/60 transition-all duration-300 ${isLarge ? "lg:col-span-1" : ""}`}
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/15 border border-cyan-500/20 mb-4">
+                  <div
+                    className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/15 border border-cyan-500/20 mb-4"
+                    data-atomic-id="aplcbal"
+                    data-atomic-instance={i}>
                     <Icon className="h-5 w-5 text-cyan-400" />
                   </div>
-                  <h3 className="text-base font-semibold text-white mb-2">{f.title}</h3>
-                  <p className="text-sm text-slate-400 leading-relaxed">{f.desc}</p>
+                  <h3
+                    className="text-base font-semibold text-white mb-2"
+                    data-atomic-id="asrb5d3"
+                    data-atomic-instance={i}>{f.title}</h3>
+                  <p
+                    className="text-sm text-slate-400 leading-relaxed"
+                    data-atomic-id="aqp8eke"
+                    data-atomic-instance={i}>{f.desc}</p>
                 </motion.div>
               );
             })}
           </motion.div>
         </div>
       </section>
-
       {/* ── TESTIMONIALS ── */}
-      <section id="contact" className="py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="py-24 md:py-32" data-atomic-id="a14xc9v3">
+        <div
+          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+          data-atomic-id="a8ry0ow">
           <motion.div {...motionProps(fadeInUp)} className="mb-16 max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3">Testimonios</p>
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4">
+            <p
+              className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3"
+              data-atomic-id="axox90z">Testimonios</p>
+            <h2
+              className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4"
+              data-atomic-id="a1adtzjz">
               Equipos que ya confían en NovaDash
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-slate-400 leading-relaxed" data-atomic-id="axoxcdz">
               Más de 2,400 empresas usan NovaDash para tomar decisiones más rápidas y con mayor confianza.
             </p>
           </motion.div>
@@ -491,50 +636,72 @@ export default function HomePage() {
             {...motionProps(staggerContainer)}
             className="grid md:grid-cols-3 gap-6"
           >
-            {testimonials.map((t) => (
-              <motion.div
-                key={t.name}
-                variants={fadeInUp}
-                whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="rounded-2xl border border-white/8 bg-slate-900/60 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.3)] hover:border-cyan-500/20 transition-all duration-300"
-              >
-                <div className="flex gap-0.5 mb-4">
-                  {Array.from({ length: t.stars }).map((_, i) => (
-                    <Star key={i} className="h-3.5 w-3.5 fill-cyan-400 text-cyan-400" />
-                  ))}
+            {testimonials.map((t, __atomicIdx) => (<motion.div
+              key={t.name}
+              variants={fadeInUp}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="rounded-2xl border border-white/8 bg-slate-900/60 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.3)] hover:border-cyan-500/20 transition-all duration-300"
+            >
+              <div
+                className="flex gap-0.5 mb-4"
+                data-atomic-id="a15nrq0m"
+                data-atomic-instance={__atomicIdx}>
+                {Array.from({ length: t.stars }).map((_, i) => (
+                  <Star key={i} className="h-3.5 w-3.5 fill-cyan-400 text-cyan-400" />
+                ))}
+              </div>
+              <p
+                className="text-sm text-slate-300 leading-relaxed mb-5 text-pretty"
+                data-atomic-id="a17a6rt1"
+                data-atomic-instance={__atomicIdx}>
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <div
+                className="flex items-center gap-3"
+                data-atomic-id="a15qle9m"
+                data-atomic-instance={__atomicIdx}>
+                <img
+                  src={t.avatar}
+                  alt={t.name}
+                  className="h-9 w-9 rounded-full object-cover border border-white/10"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(t.name)}&background=6366F1&color=fff&size=36`;
+                  }}
+                  data-atomic-id="ar4st9z"
+                  data-atomic-instance={__atomicIdx} />
+                <div data-atomic-id="ar67j3z" data-atomic-instance={__atomicIdx}>
+                  <p
+                    className="text-sm font-semibold text-white"
+                    data-atomic-id="av33j5b"
+                    data-atomic-instance={__atomicIdx}>{t.name}</p>
+                  <p
+                    className="text-xs text-slate-500"
+                    data-atomic-id="av33ktt"
+                    data-atomic-instance={__atomicIdx}>{t.role}</p>
                 </div>
-                <p className="text-sm text-slate-300 leading-relaxed mb-5 text-pretty">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="flex items-center gap-3">
-                  <img
-                    src={t.avatar}
-                    alt={t.name}
-                    className="h-9 w-9 rounded-full object-cover border border-white/10"
-                    onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(t.name)}&background=6366F1&color=fff&size=36`;
-                    }}
-                  />
-                  <div>
-                    <p className="text-sm font-semibold text-white">{t.name}</p>
-                    <p className="text-xs text-slate-500">{t.role}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>))}
           </motion.div>
         </div>
       </section>
-
       {/* ── PRICING ── */}
-      <section id="pricing" className="py-24 md:py-32 bg-slate-900/40 border-y border-white/8">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section
+        id="pricing"
+        className="py-24 md:py-32 bg-slate-900/40 border-y border-white/8"
+        data-atomic-id="a1p7rgui">
+        <div
+          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+          data-atomic-id="at763ej">
           <motion.div {...motionProps(fadeInUp)} className="text-center mb-16 max-w-xl mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3">Precios</p>
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4">
+            <p
+              className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3"
+              data-atomic-id="a2ih92m">Precios</p>
+            <h2
+              className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-4"
+              data-atomic-id="abwqspm">
               Planes para cada etapa
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-slate-400 leading-relaxed" data-atomic-id="a2ihcfm">
               Sin sorpresas. Cancela cuando quieras. Todos los planes incluyen 14 días de prueba gratuita.
             </p>
           </motion.div>
@@ -543,76 +710,108 @@ export default function HomePage() {
             {...motionProps(staggerContainer)}
             className="grid md:grid-cols-3 gap-6 items-start"
           >
-            {plans.map((plan) => (
-              <motion.div
-                key={plan.name}
-                variants={scaleIn}
-                whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className={`relative rounded-2xl border p-7 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 ${
+            {plans.map((plan, __atomicIdx) => (<motion.div
+              key={plan.name}
+              variants={scaleIn}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className={`relative rounded-2xl border p-7 shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 ${
+                plan.highlighted
+                  ? "border-cyan-500/50 bg-cyan-500/10 shadow-[0_0_40px_rgba(99,102,241,0.15)]"
+                  : "border-white/8 bg-slate-900/60 hover:border-cyan-500/20"
+              }`}
+            >
+              {plan.highlighted && (
+                <div
+                  className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan-500 px-4 py-1 text-xs font-bold text-white tracking-wide shadow-[0_0_16px_rgba(99,102,241,0.5)]"
+                  data-atomic-id="a1x3r8ot"
+                  data-atomic-instance={__atomicIdx}>
+                  Más popular
+                </div>
+              )}
+              <h3
+                className="text-lg font-bold text-white mb-1"
+                data-atomic-id="a83cggb"
+                data-atomic-instance={__atomicIdx}>{plan.name}</h3>
+              <p
+                className="text-xs text-slate-500 mb-4"
+                data-atomic-id="a1553ule"
+                data-atomic-instance={__atomicIdx}>{plan.desc}</p>
+              <div
+                className="flex items-end gap-1 mb-6"
+                data-atomic-id="a1i1wjdj"
+                data-atomic-instance={__atomicIdx}>
+                <span
+                  className="text-4xl font-extrabold text-white tracking-tight"
+                  data-atomic-id="a1t0vkvd"
+                  data-atomic-instance={__atomicIdx}>{plan.price}</span>
+                {plan.period && <span
+                  className="text-slate-500 text-sm mb-1"
+                  data-atomic-id="avf3dbr"
+                  data-atomic-instance={__atomicIdx}>{plan.period}</span>}
+              </div>
+              <ul
+                className="space-y-2.5 mb-7"
+                data-atomic-id="a83h37b"
+                data-atomic-instance={__atomicIdx}>
+                {plan.features.map((feat, __atomicIdx) => (<li
+                  key={feat}
+                  className="flex items-center gap-2.5 text-sm text-slate-300"
+                  data-atomic-id="a29maqh"
+                  data-atomic-instance={__atomicIdx}>
+                  <Check className="h-4 w-4 text-cyan-400 shrink-0" />
+                  {feat}
+                </li>))}
+              </ul>
+              <Link
+                href="/dashboard"
+                className={`flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
                   plan.highlighted
-                    ? "border-cyan-500/50 bg-cyan-500/10 shadow-[0_0_40px_rgba(99,102,241,0.15)]"
-                    : "border-white/8 bg-slate-900/60 hover:border-cyan-500/20"
+                    ? "bg-cyan-500 text-white hover:bg-cyan-400 shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:shadow-[0_0_28px_rgba(99,102,241,0.5)]"
+                    : "border border-white/10 bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white"
                 }`}
               >
-                {plan.highlighted && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan-500 px-4 py-1 text-xs font-bold text-white tracking-wide shadow-[0_0_16px_rgba(99,102,241,0.5)]">
-                    Más popular
-                  </div>
-                )}
-                <h3 className="text-lg font-bold text-white mb-1">{plan.name}</h3>
-                <p className="text-xs text-slate-500 mb-4">{plan.desc}</p>
-                <div className="flex items-end gap-1 mb-6">
-                  <span className="text-4xl font-extrabold text-white tracking-tight">{plan.price}</span>
-                  {plan.period && <span className="text-slate-500 text-sm mb-1">{plan.period}</span>}
-                </div>
-                <ul className="space-y-2.5 mb-7">
-                  {plan.features.map((feat) => (
-                    <li key={feat} className="flex items-center gap-2.5 text-sm text-slate-300">
-                      <Check className="h-4 w-4 text-cyan-400 shrink-0" />
-                      {feat}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/dashboard"
-                  className={`flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
-                    plan.highlighted
-                      ? "bg-cyan-500 text-white hover:bg-cyan-400 shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:shadow-[0_0_28px_rgba(99,102,241,0.5)]"
-                      : "border border-white/10 bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white"
-                  }`}
-                >
-                  {plan.cta}
-                  <ChevronRight className="h-4 w-4" />
-                </Link>
-              </motion.div>
-            ))}
+                {plan.cta}
+                <ChevronRight className="h-4 w-4" />
+              </Link>
+            </motion.div>))}
           </motion.div>
         </div>
       </section>
-
       {/* ── CTA BANNER ── */}
-      <section className="py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 md:py-32" data-atomic-id="a1cfq5fy">
+        <div
+          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+          data-atomic-id="a16qx83j">
           <motion.div
             {...motionProps(scaleIn)}
             className="relative rounded-3xl border border-cyan-500/25 bg-gradient-to-br from-cyan-500/10 via-slate-900/60 to-violet-500/10 p-12 md:p-16 text-center overflow-hidden shadow-[0_0_80px_rgba(99,102,241,0.12)]"
           >
             {/* Glow */}
-            <div className="pointer-events-none absolute inset-0">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-cyan-600/10 blur-[80px]" />
+            <div className="pointer-events-none absolute inset-0" data-atomic-id="a3hk207">
+              <div
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-cyan-600/10 blur-[80px]"
+                data-atomic-id="a1ll1zbe" />
             </div>
-            <div className="relative">
-              <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-cyan-300 uppercase mb-6">
+            <div className="relative" data-atomic-id="a3iyw4p">
+              <div
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-cyan-300 uppercase mb-6"
+                data-atomic-id="a1scxjnw">
                 <Zap className="h-3 w-3" />
                 Empieza hoy
               </div>
-              <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-5">
+              <h2
+                className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white text-balance mb-5"
+                data-atomic-id="acpozol">
                 Tus datos merecen un panel a su altura
               </h2>
-              <p className="text-slate-400 leading-relaxed max-w-xl mx-auto mb-8 text-pretty">
+              <p
+                className="text-slate-400 leading-relaxed max-w-xl mx-auto mb-8 text-pretty"
+                data-atomic-id="a1dw3mot">
                 Únete a más de 2,400 equipos que ya usan NovaDash para crecer con confianza. Sin tarjeta de crédito para empezar.
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-4">
+              <div
+                className="flex flex-wrap items-center justify-center gap-4"
+                data-atomic-id="a1sh621e">
                 <Link
                   href="/dashboard"
                   className="group inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(99,102,241,0.4)] hover:bg-cyan-400 hover:shadow-[0_0_36px_rgba(99,102,241,0.55)] transition-all duration-300"
