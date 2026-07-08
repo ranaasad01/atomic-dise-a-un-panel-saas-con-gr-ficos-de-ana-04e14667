@@ -166,27 +166,27 @@ const transactions = [
 
 const colorMap: Record<string, { bg: string; border: string; text: string; glow: string }> = {
   indigo: {
-    bg: "bg-sky-500/15",
-    border: "border-sky-500/25",
-    text: "text-sky-400",
+    bg: "bg-amber-500/15",
+    border: "border-amber-500/25",
+    text: "text-amber-400",
     glow: "shadow-indigo-500/10",
   },
   violet: {
-    bg: "bg-sky-500/15",
-    border: "border-sky-500/25",
-    text: "text-sky-400",
+    bg: "bg-red-500/15",
+    border: "border-red-500/25",
+    text: "text-red-400",
     glow: "shadow-violet-500/10",
   },
   emerald: {
-    bg: "bg-sky-500/15",
-    border: "border-sky-500/25",
-    text: "text-sky-400",
+    bg: "bg-amber-500/15",
+    border: "border-amber-500/25",
+    text: "text-amber-400",
     glow: "shadow-emerald-500/10",
   },
   rose: {
-    bg: "bg-sky-500/15",
-    border: "border-sky-500/25",
-    text: "text-sky-400",
+    bg: "bg-amber-500/15",
+    border: "border-amber-500/25",
+    text: "text-amber-400",
     glow: "shadow-rose-500/10",
   },
 };
@@ -225,17 +225,17 @@ function StatusBadge({ status }: { status: string }) {
     completado: {
       icon: <CheckCircle className="h-3 w-3" />,
       label: "Completado",
-      cls: "bg-sky-500/15 text-sky-400 border-sky-500/25",
+      cls: "bg-amber-500/15 text-amber-400 border-amber-500/25",
     },
     pendiente: {
       icon: <Clock className="h-3 w-3" />,
       label: "Pendiente",
-      cls: "bg-sky-500/15 text-sky-400 border-sky-500/25",
+      cls: "bg-amber-500/15 text-amber-400 border-amber-500/25",
     },
     fallido: {
       icon: <XCircle className="h-3 w-3" />,
       label: "Fallido",
-      cls: "bg-sky-500/15 text-sky-400 border-sky-500/25",
+      cls: "bg-amber-500/15 text-amber-400 border-amber-500/25",
     },
   };
   const s = map[status] ?? {
@@ -256,9 +256,9 @@ function StatusBadge({ status }: { status: string }) {
 function PlanBadge({ plan }: { plan: string }) {
   const cls =
     plan === "Enterprise"
-      ? "bg-sky-500/15 text-sky-300 border-sky-500/25"
+      ? "bg-amber-500/15 text-amber-300 border-amber-500/25"
       : plan === "Pro"
-      ? "bg-sky-500/15 text-sky-300 border-sky-500/25"
+      ? "bg-red-500/15 text-red-300 border-red-500/25"
       : "bg-slate-500/15 text-slate-400 border-slate-500/25";
   return (
     <span className={`inline-flex px-2 py-0.5 rounded-full text-xs font-medium border ${cls}`}>
@@ -314,8 +314,8 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-[#0A0F1E] text-white">
       {/* Background glow */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-40 left-1/4 h-[500px] w-[500px] rounded-full bg-sky-600/8 blur-[120px]" />
-        <div className="absolute top-1/3 right-1/4 h-[400px] w-[400px] rounded-full bg-sky-600/6 blur-[100px]" />
+        <div className="absolute -top-40 left-1/4 h-[500px] w-[500px] rounded-full bg-amber-600/8 blur-[120px]" />
+        <div className="absolute top-1/3 right-1/4 h-[400px] w-[400px] rounded-full bg-red-600/6 blur-[100px]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 space-y-8">
@@ -327,7 +327,7 @@ export default function DashboardPage() {
           className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
         >
           <motion.div variants={fadeInUp}>
-            <p className="text-xs font-semibold uppercase tracking-widest text-sky-400 mb-1">
+            <p className="text-xs font-semibold uppercase tracking-widest text-amber-400 mb-1">
               {t("dashboard.overview") || "Resumen general"}
             </p>
             <h1 className="text-3xl font-bold tracking-tight text-white text-balance">
@@ -349,7 +349,7 @@ export default function DashboardPage() {
                 onClick={() => setActivePeriod(p.value)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
                   activePeriod === p.value
-                    ? "bg-sky-500/25 text-sky-300 border border-sky-500/30"
+                    ? "bg-amber-500/25 text-amber-300 border border-amber-500/30"
                     : "text-slate-400 hover:text-slate-200 hover:bg-white/5"
                 }`}
               >
@@ -392,8 +392,8 @@ export default function DashboardPage() {
                   <span
                     className={`inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-xs font-semibold border ${
                       goodChange
-                        ? "bg-sky-500/15 text-sky-400 border-sky-500/25"
-                        : "bg-sky-500/15 text-sky-400 border-sky-500/25"
+                        ? "bg-amber-500/15 text-amber-400 border-amber-500/25"
+                        : "bg-amber-500/15 text-amber-400 border-amber-500/25"
                     }`}
                   >
                     {goodChange ? (
@@ -438,11 +438,11 @@ export default function DashboardPage() {
             </div>
             <div className="flex items-center gap-4 text-xs text-slate-400">
               <span className="flex items-center gap-1.5">
-                <span className="h-2 w-4 rounded-full bg-sky-400 inline-block" />
+                <span className="h-2 w-4 rounded-full bg-amber-400 inline-block" />
                 Ingresos
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="h-2 w-4 rounded-full bg-sky-400 inline-block" />
+                <span className="h-2 w-4 rounded-full bg-red-400 inline-block" />
                 Usuarios
               </span>
             </div>
@@ -544,7 +544,7 @@ export default function DashboardPage() {
             </ResponsiveContainer>
             <div className="flex items-center gap-4 mt-4 text-xs text-slate-400">
               <span className="flex items-center gap-1.5">
-                <span className="h-2 w-4 rounded-full bg-sky-500 inline-block" />
+                <span className="h-2 w-4 rounded-full bg-amber-500 inline-block" />
                 Período actual
               </span>
               <span className="flex items-center gap-1.5">
@@ -635,7 +635,7 @@ export default function DashboardPage() {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="self-start sm:self-auto px-3 py-1.5 rounded-lg border border-sky-500/30 bg-sky-500/15 text-sky-300 text-xs font-medium hover:bg-sky-500/25 transition-all duration-200"
+              className="self-start sm:self-auto px-3 py-1.5 rounded-lg border border-amber-500/30 bg-amber-500/15 text-amber-300 text-xs font-medium hover:bg-amber-500/25 transition-all duration-200"
             >
               Ver todas
             </motion.button>
@@ -736,7 +736,7 @@ export default function DashboardPage() {
                   key={n}
                   className={`h-7 w-7 rounded-lg text-xs font-medium transition-all duration-200 ${
                     n === 1
-                      ? "bg-sky-500/25 text-sky-300 border border-sky-500/30"
+                      ? "bg-amber-500/25 text-amber-300 border border-amber-500/30"
                       : "text-slate-500 hover:text-slate-200 hover:bg-white/5"
                   }`}
                 >

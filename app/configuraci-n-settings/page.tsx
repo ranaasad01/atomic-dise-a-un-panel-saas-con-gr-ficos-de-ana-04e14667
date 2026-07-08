@@ -57,10 +57,10 @@ function SaveBanner({ visible }: { visible: boolean }) {
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: visible ? 1 : 0, y: visible ? 0 : 16 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-xl border border-sky-500/30 bg-sky-500/20 px-5 py-3 shadow-[0_8px_32px_rgba(99,102,241,0.25)] backdrop-blur-xl"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-xl border border-amber-500/30 bg-amber-500/20 px-5 py-3 shadow-[0_8px_32px_rgba(99,102,241,0.25)] backdrop-blur-xl"
     >
-      <Check className="h-4 w-4 text-sky-300" />
-      <span className="text-sm font-medium text-sky-200">Cambios guardados correctamente</span>
+      <Check className="h-4 w-4 text-amber-300" />
+      <span className="text-sm font-medium text-amber-200">Cambios guardados correctamente</span>
     </motion.div>
   );
 }
@@ -106,7 +106,7 @@ function InputField({
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
       disabled={disabled}
-      className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 outline-none transition-all duration-200 focus:border-sky-500/50 focus:ring-2 focus:ring-sky-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
+      className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 outline-none transition-all duration-200 focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
     />
   );
 }
@@ -119,8 +119,8 @@ function Toggle({ checked, onChange, label }: { checked: boolean; onChange: (v: 
       aria-checked={checked}
       aria-label={label}
       onClick={() => onChange(!checked)}
-      className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 ${
-        checked ? "bg-sky-500" : "bg-white/10"
+      className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
+        checked ? "bg-amber-500" : "bg-white/10"
       }`}
     >
       <span
@@ -145,7 +145,7 @@ function SelectField({
     <select
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="w-full rounded-lg border border-white/10 bg-[#1E293B] px-3 py-2 text-sm text-slate-200 outline-none transition-all duration-200 focus:border-sky-500/50 focus:ring-2 focus:ring-sky-500/20"
+      className="w-full rounded-lg border border-white/10 bg-[#1E293B] px-3 py-2 text-sm text-slate-200 outline-none transition-all duration-200 focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20"
     >
       {options.map((o) => (
         <option key={o.value} value={o.value}>
@@ -179,10 +179,10 @@ function PerfilTab({ onSave }: { onSave: () => void }) {
       {/* Avatar */}
       <motion.div variants={fadeInUp} className="mb-6 flex items-center gap-5 rounded-xl border border-white/8 bg-white/3 p-5">
         <div className="relative">
-          <div className="h-16 w-16 rounded-full bg-gradient-to-br from-sky-500 to-sky-600 flex items-center justify-center text-xl font-bold text-white shadow-[0_0_0_3px_rgba(99,102,241,0.3)]">
+          <div className="h-16 w-16 rounded-full bg-gradient-to-br from-amber-500 to-red-600 flex items-center justify-center text-xl font-bold text-white shadow-[0_0_0_3px_rgba(99,102,241,0.3)]">
             AR
           </div>
-          <div className="absolute -bottom-1 -right-1 h-5 w-5 rounded-full bg-sky-500 border-2 border-[#0F172A]" />
+          <div className="absolute -bottom-1 -right-1 h-5 w-5 rounded-full bg-amber-500 border-2 border-[#0F172A]" />
         </div>
         <div className="flex-1">
           <p className="text-sm font-medium text-slate-200">Foto de perfil</p>
@@ -217,7 +217,7 @@ function PerfilTab({ onSave }: { onSave: () => void }) {
             value={bio}
             onChange={(e) => setBio(e.target.value)}
             rows={3}
-            className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 outline-none transition-all duration-200 focus:border-sky-500/50 focus:ring-2 focus:ring-sky-500/20 resize-none"
+            className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 outline-none transition-all duration-200 focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 resize-none"
           />
         </FieldGroup>
         <FieldGroup label="Zona horaria" hint="Afecta la visualización de fechas y horas.">
@@ -237,7 +237,7 @@ function PerfilTab({ onSave }: { onSave: () => void }) {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           onClick={onSave}
-          className="flex items-center gap-2 rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:bg-sky-400 transition-all duration-200"
+          className="flex items-center gap-2 rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:bg-amber-400 transition-all duration-200"
         >
           <Save className="h-4 w-4" />
           Guardar cambios
@@ -291,7 +291,7 @@ function NotificacionesTab({ onSave }: { onSave: () => void }) {
       {groups.map((group) => (
         <motion.div key={group.title} variants={fadeInUp} className="mb-5 rounded-xl border border-white/8 bg-white/3 overflow-hidden">
           <div className="flex items-center gap-2.5 px-5 py-3.5 border-b border-white/5 bg-white/2">
-            <group.icon className="h-4 w-4 text-sky-400" />
+            <group.icon className="h-4 w-4 text-amber-400" />
             <span className="text-sm font-semibold text-slate-200">{group.title}</span>
           </div>
           <div className="divide-y divide-white/5">
@@ -327,7 +327,7 @@ function NotificacionesTab({ onSave }: { onSave: () => void }) {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           onClick={onSave}
-          className="flex items-center gap-2 rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:bg-sky-400 transition-all duration-200"
+          className="flex items-center gap-2 rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:bg-amber-400 transition-all duration-200"
         >
           <Save className="h-4 w-4" />
           Guardar preferencias
@@ -348,7 +348,7 @@ function SeguridadTab({ onSave }: { onSave: () => void }) {
 
   const pwdStrength = newPwd.length === 0 ? 0 : newPwd.length < 6 ? 1 : newPwd.length < 10 ? 2 : 3;
   const strengthLabel = ["", "Débil", "Moderada", "Fuerte"][pwdStrength];
-  const strengthColor = ["", "bg-sky-500", "bg-sky-500", "bg-sky-500"][pwdStrength];
+  const strengthColor = ["", "bg-red-500", "bg-amber-500", "bg-amber-500"][pwdStrength];
 
   const sessions = [
     { device: "Chrome en macOS", location: "Ciudad de México, MX", time: "Activa ahora", current: true },
@@ -368,7 +368,7 @@ function SeguridadTab({ onSave }: { onSave: () => void }) {
       {/* Password */}
       <motion.div variants={fadeInUp} className="mb-5 rounded-xl border border-white/8 bg-white/3 overflow-hidden">
         <div className="flex items-center gap-2.5 px-5 py-3.5 border-b border-white/5 bg-white/2">
-          <Lock className="h-4 w-4 text-sky-400" />
+          <Lock className="h-4 w-4 text-amber-400" />
           <span className="text-sm font-semibold text-slate-200">Cambiar contraseña</span>
         </div>
         <div className="px-5 divide-y divide-white/5">
@@ -415,7 +415,7 @@ function SeguridadTab({ onSave }: { onSave: () => void }) {
             <div className="space-y-1">
               <InputField value={confirmPwd} onChange={setConfirmPwd} type="password" placeholder="••••••••" />
               {confirmPwd.length > 0 && confirmPwd !== newPwd && (
-                <p className="flex items-center gap-1 text-xs text-sky-400">
+                <p className="flex items-center gap-1 text-xs text-red-400">
                   <AlertCircle className="h-3 w-3" /> Las contraseñas no coinciden
                 </p>
               )}
@@ -427,7 +427,7 @@ function SeguridadTab({ onSave }: { onSave: () => void }) {
       {/* 2FA */}
       <motion.div variants={fadeInUp} className="mb-5 rounded-xl border border-white/8 bg-white/3 overflow-hidden">
         <div className="flex items-center gap-2.5 px-5 py-3.5 border-b border-white/5 bg-white/2">
-          <Shield className="h-4 w-4 text-sky-400" />
+          <Shield className="h-4 w-4 text-amber-400" />
           <span className="text-sm font-semibold text-slate-200">Autenticación de dos factores</span>
         </div>
         <div className="px-5 py-4 flex items-center justify-between">
@@ -438,9 +438,9 @@ function SeguridadTab({ onSave }: { onSave: () => void }) {
           <Toggle checked={twoFA} onChange={setTwoFA} label="Autenticación de dos factores" />
         </div>
         {twoFA && (
-          <div className="mx-5 mb-4 rounded-lg border border-sky-500/20 bg-sky-500/10 px-4 py-3 flex items-center gap-2">
-            <Check className="h-4 w-4 text-sky-400 shrink-0" />
-            <p className="text-xs text-sky-300">2FA activado. Tu cuenta está protegida con Google Authenticator.</p>
+          <div className="mx-5 mb-4 rounded-lg border border-amber-500/20 bg-amber-500/10 px-4 py-3 flex items-center gap-2">
+            <Check className="h-4 w-4 text-amber-400 shrink-0" />
+            <p className="text-xs text-amber-300">2FA activado. Tu cuenta está protegida con Google Authenticator.</p>
           </div>
         )}
         <div className="px-5 pb-4">
@@ -463,26 +463,26 @@ function SeguridadTab({ onSave }: { onSave: () => void }) {
       {/* Sessions */}
       <motion.div variants={fadeInUp} className="mb-5 rounded-xl border border-white/8 bg-white/3 overflow-hidden">
         <div className="flex items-center gap-2.5 px-5 py-3.5 border-b border-white/5 bg-white/2">
-          <Globe className="h-4 w-4 text-sky-400" />
+          <Globe className="h-4 w-4 text-amber-400" />
           <span className="text-sm font-semibold text-slate-200">Sesiones activas</span>
         </div>
         <div className="divide-y divide-white/5">
           {sessions.map((s) => (
             <div key={s.device} className="flex items-center justify-between px-5 py-4">
               <div className="flex items-center gap-3">
-                <div className={`h-2 w-2 rounded-full ${s.current ? "bg-sky-400" : "bg-slate-600"}`} />
+                <div className={`h-2 w-2 rounded-full ${s.current ? "bg-amber-400" : "bg-slate-600"}`} />
                 <div>
                   <p className="text-sm font-medium text-slate-200">{s.device}</p>
                   <p className="text-xs text-slate-500">{s.location} · {s.time}</p>
                 </div>
               </div>
               {!s.current && (
-                <button className="text-xs text-sky-400 hover:text-sky-300 transition-colors font-medium">
+                <button className="text-xs text-red-400 hover:text-red-300 transition-colors font-medium">
                   Cerrar
                 </button>
               )}
               {s.current && (
-                <span className="text-xs text-sky-400 font-medium">Esta sesión</span>
+                <span className="text-xs text-amber-400 font-medium">Esta sesión</span>
               )}
             </div>
           ))}
@@ -494,7 +494,7 @@ function SeguridadTab({ onSave }: { onSave: () => void }) {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           onClick={onSave}
-          className="flex items-center gap-2 rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:bg-sky-400 transition-all duration-200"
+          className="flex items-center gap-2 rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:bg-amber-400 transition-all duration-200"
         >
           <Save className="h-4 w-4" />
           Guardar seguridad
@@ -519,12 +519,12 @@ function AparienciaTab({ onSave }: { onSave: () => void }) {
   ];
 
   const accents = [
-    { id: "indigo", color: "bg-sky-500", label: "Índigo" },
-    { id: "violet", color: "bg-sky-500", label: "Violeta" },
-    { id: "cyan", color: "bg-sky-500", label: "Cian" },
-    { id: "emerald", color: "bg-sky-500", label: "Esmeralda" },
-    { id: "rose", color: "bg-sky-500", label: "Rosa" },
-    { id: "amber", color: "bg-sky-500", label: "Ámbar" },
+    { id: "indigo", color: "bg-amber-500", label: "Índigo" },
+    { id: "violet", color: "bg-red-500", label: "Violeta" },
+    { id: "cyan", color: "bg-amber-500", label: "Cian" },
+    { id: "emerald", color: "bg-amber-500", label: "Esmeralda" },
+    { id: "rose", color: "bg-amber-500", label: "Rosa" },
+    { id: "amber", color: "bg-amber-500", label: "Ámbar" },
   ];
 
   return (
@@ -539,7 +539,7 @@ function AparienciaTab({ onSave }: { onSave: () => void }) {
       {/* Theme */}
       <motion.div variants={fadeInUp} className="mb-5 rounded-xl border border-white/8 bg-white/3 overflow-hidden">
         <div className="flex items-center gap-2.5 px-5 py-3.5 border-b border-white/5 bg-white/2">
-          <Moon className="h-4 w-4 text-sky-400" />
+          <Moon className="h-4 w-4 text-amber-400" />
           <span className="text-sm font-semibold text-slate-200">Tema</span>
         </div>
         <div className="px-5 py-4">
@@ -552,13 +552,13 @@ function AparienciaTab({ onSave }: { onSave: () => void }) {
                 onClick={() => setTheme(t.id)}
                 className={`flex flex-col items-center gap-2 rounded-xl border p-4 transition-all duration-200 ${
                   theme === t.id
-                    ? "border-sky-500/50 bg-sky-500/15 text-sky-300"
+                    ? "border-amber-500/50 bg-amber-500/15 text-amber-300"
                     : "border-white/8 bg-white/3 text-slate-400 hover:border-white/15 hover:bg-white/5"
                 }`}
               >
                 <t.icon className="h-5 w-5" />
                 <span className="text-xs font-medium">{t.label}</span>
-                {theme === t.id && <Check className="h-3 w-3 text-sky-400" />}
+                {theme === t.id && <Check className="h-3 w-3 text-amber-400" />}
               </motion.button>
             ))}
           </div>
@@ -630,7 +630,7 @@ function AparienciaTab({ onSave }: { onSave: () => void }) {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           onClick={onSave}
-          className="flex items-center gap-2 rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:bg-sky-400 transition-all duration-200"
+          className="flex items-center gap-2 rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:bg-amber-400 transition-all duration-200"
         >
           <Save className="h-4 w-4" />
           Guardar apariencia
@@ -660,9 +660,9 @@ function IntegracionesTab() {
         />
       </motion.div>
 
-      <motion.div variants={fadeInUp} className="mb-5 rounded-xl border border-sky-500/20 bg-sky-500/8 px-5 py-4 flex items-start gap-3">
-        <AlertCircle className="h-4 w-4 text-sky-400 mt-0.5 shrink-0" />
-        <p className="text-sm text-sky-300 leading-relaxed">
+      <motion.div variants={fadeInUp} className="mb-5 rounded-xl border border-amber-500/20 bg-amber-500/8 px-5 py-4 flex items-start gap-3">
+        <AlertCircle className="h-4 w-4 text-amber-400 mt-0.5 shrink-0" />
+        <p className="text-sm text-amber-300 leading-relaxed">
           Las integraciones activas sincronizan datos automáticamente cada 15 minutos. Puedes pausarlas en cualquier momento sin perder la configuración.
         </p>
       </motion.div>
@@ -687,8 +687,8 @@ function IntegracionesTab() {
                       <div className="flex items-center gap-2">
                         <p className="text-sm font-semibold text-slate-200">{integration.name}</p>
                         {integration.connected && (
-                          <span className="inline-flex items-center gap-1 rounded-full bg-sky-500/15 border border-sky-500/25 px-2 py-0.5 text-xs font-medium text-sky-400">
-                            <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
+                          <span className="inline-flex items-center gap-1 rounded-full bg-amber-500/15 border border-amber-500/25 px-2 py-0.5 text-xs font-medium text-amber-400">
+                            <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
                             Conectado
                           </span>
                         )}
@@ -702,8 +702,8 @@ function IntegracionesTab() {
                     onClick={() => toggle(integration.id)}
                     className={`flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-semibold transition-all duration-200 ${
                       integration.connected
-                        ? "border-sky-500/25 bg-sky-500/10 text-sky-400 hover:bg-sky-500/20"
-                        : "border-sky-500/30 bg-sky-500/15 text-sky-300 hover:bg-sky-500/25"
+                        ? "border-red-500/25 bg-red-500/10 text-red-400 hover:bg-red-500/20"
+                        : "border-amber-500/30 bg-amber-500/15 text-amber-300 hover:bg-amber-500/25"
                     }`}
                   >
                     {integration.connected ? (
@@ -742,8 +742,8 @@ export default function SettingsPage() {
     <div className="min-h-screen bg-[#0F172A]">
       {/* Ambient glow */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 h-96 w-96 rounded-full bg-sky-500/6 blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-sky-500/5 blur-3xl" />
+        <div className="absolute top-0 left-1/4 h-96 w-96 rounded-full bg-amber-500/6 blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-red-500/5 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
@@ -779,7 +779,7 @@ export default function SettingsPage() {
                       i < TABS.length - 1 ? "border-b border-white/5" : ""
                     } ${
                       active
-                        ? "bg-sky-500/15 text-sky-300 border-l-2 border-l-indigo-500"
+                        ? "bg-amber-500/15 text-amber-300 border-l-2 border-l-indigo-500"
                         : "text-slate-400 hover:text-slate-200 hover:bg-white/5 border-l-2 border-l-transparent"
                     }`}
                   >
@@ -793,11 +793,11 @@ export default function SettingsPage() {
             {/* Danger zone */}
             <motion.div
               variants={fadeInUp}
-              className="mt-4 rounded-xl border border-sky-500/15 bg-sky-500/5 p-4"
+              className="mt-4 rounded-xl border border-red-500/15 bg-red-500/5 p-4"
             >
-              <p className="text-xs font-semibold text-sky-400 mb-2">Zona de peligro</p>
+              <p className="text-xs font-semibold text-red-400 mb-2">Zona de peligro</p>
               <p className="text-xs text-slate-500 mb-3 leading-relaxed">Esta acción eliminará permanentemente tu cuenta y todos los datos asociados.</p>
-              <button className="w-full flex items-center justify-center gap-1.5 rounded-lg border border-sky-500/25 bg-sky-500/10 px-3 py-2 text-xs font-semibold text-sky-400 hover:bg-sky-500/20 transition-all duration-200">
+              <button className="w-full flex items-center justify-center gap-1.5 rounded-lg border border-red-500/25 bg-red-500/10 px-3 py-2 text-xs font-semibold text-red-400 hover:bg-red-500/20 transition-all duration-200">
                 <Trash2 className="h-3 w-3" />
                 Eliminar cuenta
               </button>

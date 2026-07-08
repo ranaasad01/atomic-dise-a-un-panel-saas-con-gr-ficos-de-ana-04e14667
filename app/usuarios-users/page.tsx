@@ -172,58 +172,58 @@ const usersData = [
 ];
 
 const avatarColorMap: Record<string, string> = {
-  indigo: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-  violet: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-  emerald: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-  amber: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-  rose: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-  cyan: "bg-sky-500/20 text-sky-300 border-sky-500/30",
+  indigo: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+  violet: "bg-red-500/20 text-red-300 border-red-500/30",
+  emerald: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+  amber: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+  rose: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+  cyan: "bg-amber-500/20 text-amber-300 border-amber-500/30",
 };
 
 const kpiColorMap: Record<string, { bg: string; text: string; border: string; glow: string }> = {
   indigo: {
-    bg: "bg-sky-500/10",
-    text: "text-sky-400",
-    border: "border-sky-500/20",
+    bg: "bg-amber-500/10",
+    text: "text-amber-400",
+    border: "border-amber-500/20",
     glow: "shadow-indigo-500/10",
   },
   emerald: {
-    bg: "bg-sky-500/10",
-    text: "text-sky-400",
-    border: "border-sky-500/20",
+    bg: "bg-amber-500/10",
+    text: "text-amber-400",
+    border: "border-amber-500/20",
     glow: "shadow-emerald-500/10",
   },
   violet: {
-    bg: "bg-sky-500/10",
-    text: "text-sky-400",
-    border: "border-sky-500/20",
+    bg: "bg-red-500/10",
+    text: "text-red-400",
+    border: "border-red-500/20",
     glow: "shadow-violet-500/10",
   },
   rose: {
-    bg: "bg-sky-500/10",
-    text: "text-sky-400",
-    border: "border-sky-500/20",
+    bg: "bg-amber-500/10",
+    text: "text-amber-400",
+    border: "border-amber-500/20",
     glow: "shadow-rose-500/10",
   },
 };
 
 const planBadgeMap: Record<string, string> = {
-  Enterprise: "bg-sky-500/15 text-sky-300 border-sky-500/25",
-  Pro: "bg-sky-500/15 text-sky-300 border-sky-500/25",
+  Enterprise: "bg-amber-500/15 text-amber-300 border-amber-500/25",
+  Pro: "bg-red-500/15 text-red-300 border-red-500/25",
   Básico: "bg-slate-500/15 text-slate-300 border-slate-500/25",
   Gratuito: "bg-slate-700/40 text-slate-400 border-slate-600/25",
 };
 
 const statusBadgeMap: Record<string, string> = {
-  activo: "bg-sky-500/15 text-sky-300 border-sky-500/25",
+  activo: "bg-amber-500/15 text-amber-300 border-amber-500/25",
   inactivo: "bg-slate-600/20 text-slate-400 border-slate-600/25",
-  pendiente: "bg-sky-500/15 text-sky-300 border-sky-500/25",
+  pendiente: "bg-amber-500/15 text-amber-300 border-amber-500/25",
 };
 
 const statusDotMap: Record<string, string> = {
-  activo: "bg-sky-400",
+  activo: "bg-amber-400",
   inactivo: "bg-slate-500",
-  pendiente: "bg-sky-400",
+  pendiente: "bg-amber-400",
 };
 
 type SortKey = "name" | "sessions" | "joined";
@@ -288,9 +288,9 @@ export default function UsersPage() {
     if (sortKey !== col)
       return <ArrowDown className="h-3 w-3 text-slate-600 ml-1" />;
     return sortDir === "asc" ? (
-      <ArrowUp className="h-3 w-3 text-sky-400 ml-1" />
+      <ArrowUp className="h-3 w-3 text-amber-400 ml-1" />
     ) : (
-      <ArrowDown className="h-3 w-3 text-sky-400 ml-1" />
+      <ArrowDown className="h-3 w-3 text-amber-400 ml-1" />
     );
   };
 
@@ -307,7 +307,7 @@ export default function UsersPage() {
           >
             <motion.div variants={fadeInUp}>
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-semibold uppercase tracking-widest text-sky-400">
+                <span className="text-xs font-semibold uppercase tracking-widest text-amber-400">
                   {t("users.breadcrumb") || "Gestión"}
                 </span>
               </div>
@@ -331,7 +331,7 @@ export default function UsersPage() {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-sm font-semibold text-white shadow-[0_0_20px_rgba(99,102,241,0.3)] transition-all duration-200"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-sm font-semibold text-white shadow-[0_0_20px_rgba(99,102,241,0.3)] transition-all duration-200"
               >
                 <User className="h-4 w-4" />
                 {t("users.invite") || "Invitar Usuario"}
@@ -383,7 +383,7 @@ export default function UsersPage() {
                     </div>
                     <span
                       className={`flex items-center gap-0.5 text-xs font-semibold ${
-                        isPositive ? "text-sky-400" : "text-sky-400"
+                        isPositive ? "text-amber-400" : "text-amber-400"
                       }`}
                     >
                       {isPositive ? (
@@ -428,11 +428,11 @@ export default function UsersPage() {
               </div>
               <div className="flex items-center gap-3 text-xs text-slate-500">
                 <span className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-sky-400" />
+                  <span className="h-2 w-2 rounded-full bg-amber-400" />
                   Total
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-sky-400" />
+                  <span className="h-2 w-2 rounded-full bg-amber-400" />
                   Activos
                 </span>
               </div>
@@ -570,7 +570,7 @@ export default function UsersPage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder={t("users.search") || "Buscar por nombre o email..."}
-                className="w-full pl-9 pr-4 py-2 rounded-xl border border-white/8 bg-white/5 text-sm text-slate-200 placeholder-slate-600 focus:outline-none focus:border-sky-500/50 focus:bg-white/8 transition-all duration-200"
+                className="w-full pl-9 pr-4 py-2 rounded-xl border border-white/8 bg-white/5 text-sm text-slate-200 placeholder-slate-600 focus:outline-none focus:border-amber-500/50 focus:bg-white/8 transition-all duration-200"
               />
             </div>
             <div className="flex items-center gap-2 flex-wrap">
@@ -578,7 +578,7 @@ export default function UsersPage() {
                 <select
                   value={filterPlan}
                   onChange={(e) => setFilterPlan(e.target.value)}
-                  className="appearance-none pl-3 pr-8 py-2 rounded-xl border border-white/8 bg-white/5 text-sm text-slate-300 focus:outline-none focus:border-sky-500/50 transition-all duration-200 cursor-pointer"
+                  className="appearance-none pl-3 pr-8 py-2 rounded-xl border border-white/8 bg-white/5 text-sm text-slate-300 focus:outline-none focus:border-amber-500/50 transition-all duration-200 cursor-pointer"
                 >
                   <option value="todos">Todos los planes</option>
                   <option value="Enterprise">Enterprise</option>
@@ -592,7 +592,7 @@ export default function UsersPage() {
                 <select
                   value={filterStatus}
                   onChange={(e) => setFilterStatus(e.target.value)}
-                  className="appearance-none pl-3 pr-8 py-2 rounded-xl border border-white/8 bg-white/5 text-sm text-slate-300 focus:outline-none focus:border-sky-500/50 transition-all duration-200 cursor-pointer"
+                  className="appearance-none pl-3 pr-8 py-2 rounded-xl border border-white/8 bg-white/5 text-sm text-slate-300 focus:outline-none focus:border-amber-500/50 transition-all duration-200 cursor-pointer"
                 >
                   <option value="todos">Todos los estados</option>
                   <option value="activo">Activo</option>
@@ -619,7 +619,7 @@ export default function UsersPage() {
                 <span className="text-xs text-slate-400">
                   {selectedIds.length} seleccionados
                 </span>
-                <button className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-sky-500/15 border border-sky-500/25 text-xs text-sky-300 hover:bg-sky-500/25 transition-all duration-200">
+                <button className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-amber-500/15 border border-amber-500/25 text-xs text-amber-300 hover:bg-amber-500/25 transition-all duration-200">
                   <Trash2 className="h-3 w-3" />
                   Eliminar
                 </button>
@@ -637,8 +637,8 @@ export default function UsersPage() {
                       onClick={toggleAll}
                       className={`h-4 w-4 rounded border flex items-center justify-center transition-all duration-200 ${
                         selectedIds.length === filtered.length && filtered.length > 0
-                          ? "bg-sky-500 border-sky-500"
-                          : "border-white/20 bg-white/5 hover:border-sky-500/50"
+                          ? "bg-amber-500 border-amber-500"
+                          : "border-white/20 bg-white/5 hover:border-amber-500/50"
                       }`}
                     >
                       {selectedIds.length === filtered.length && filtered.length > 0 && (
@@ -715,7 +715,7 @@ export default function UsersPage() {
                       transition={{ delay: idx * 0.04, duration: 0.3, ease: "easeOut" }}
                       className={`border-b border-white/4 transition-colors duration-150 ${
                         isSelected
-                          ? "bg-sky-500/5"
+                          ? "bg-amber-500/5"
                           : "hover:bg-white/3"
                       }`}
                     >
@@ -724,8 +724,8 @@ export default function UsersPage() {
                           onClick={() => toggleSelect(user.id)}
                           className={`h-4 w-4 rounded border flex items-center justify-center transition-all duration-200 ${
                             isSelected
-                              ? "bg-sky-500 border-sky-500"
-                              : "border-white/20 bg-white/5 hover:border-sky-500/50"
+                              ? "bg-amber-500 border-amber-500"
+                              : "border-white/20 bg-white/5 hover:border-amber-500/50"
                           }`}
                         >
                           {isSelected && (
@@ -790,7 +790,7 @@ export default function UsersPage() {
                           <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
-                            className="h-7 w-7 flex items-center justify-center rounded-lg border border-white/8 bg-white/5 text-slate-500 hover:text-sky-300 hover:bg-sky-500/10 hover:border-sky-500/25 transition-all duration-200"
+                            className="h-7 w-7 flex items-center justify-center rounded-lg border border-white/8 bg-white/5 text-slate-500 hover:text-amber-300 hover:bg-amber-500/10 hover:border-amber-500/25 transition-all duration-200"
                             aria-label="Ver usuario"
                           >
                             <Eye className="h-3.5 w-3.5" />
@@ -806,7 +806,7 @@ export default function UsersPage() {
                           <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
-                            className="h-7 w-7 flex items-center justify-center rounded-lg border border-white/8 bg-white/5 text-slate-500 hover:text-sky-300 hover:bg-sky-500/10 hover:border-sky-500/25 transition-all duration-200"
+                            className="h-7 w-7 flex items-center justify-center rounded-lg border border-white/8 bg-white/5 text-slate-500 hover:text-amber-300 hover:bg-amber-500/10 hover:border-amber-500/25 transition-all duration-200"
                             aria-label="Eliminar usuario"
                           >
                             <Trash2 className="h-3.5 w-3.5" />
@@ -832,7 +832,7 @@ export default function UsersPage() {
                             setFilterPlan("todos");
                             setFilterStatus("todos");
                           }}
-                          className="text-xs text-sky-400 hover:text-sky-300 transition-colors duration-200"
+                          className="text-xs text-amber-400 hover:text-amber-300 transition-colors duration-200"
                         >
                           Limpiar filtros
                         </button>
@@ -859,7 +859,7 @@ export default function UsersPage() {
                   key={page}
                   className={`h-7 w-7 rounded-lg text-xs font-medium transition-all duration-200 ${
                     page === 1
-                      ? "bg-sky-500/20 border border-sky-500/30 text-sky-300"
+                      ? "bg-amber-500/20 border border-amber-500/30 text-amber-300"
                       : "border border-white/8 bg-white/5 text-slate-500 hover:text-slate-300 hover:bg-white/10"
                   }`}
                 >
