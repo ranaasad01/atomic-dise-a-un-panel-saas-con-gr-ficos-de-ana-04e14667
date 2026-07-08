@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import {
   AreaChart,
@@ -233,19 +233,31 @@ function KPIStatCard({ id, label, value, prefix, suffix, change, icon: Icon, col
       whileHover={{ y: -3, transition: { duration: 0.2 } }}
       className={`relative rounded-2xl border ${c.border} bg-[#0F172A]/60 backdrop-blur-sm p-5 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-8px_rgba(0,0,0,0.4)] ${c.glow} overflow-hidden`}
     >
-      <div className={`absolute inset-0 ${c.bg} opacity-30 pointer-events-none`} />
-      <div className="relative flex items-start justify-between gap-3">
-        <div className="space-y-1">
-          <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">{label}</p>
-          <p className="text-2xl font-bold tracking-tight text-white">
+      <div
+        className={`absolute inset-0 ${c.bg} opacity-30 pointer-events-none`}
+        data-atomic-id="a8lovcc" />
+      <div
+        className="relative flex items-start justify-between gap-3"
+        data-atomic-id="a8n3pgu">
+        <div className="space-y-1" data-atomic-id="a1m930hd">
+          <p
+            className="text-xs font-medium text-slate-500 uppercase tracking-wider"
+            data-atomic-id="a1w29hgh">{label}</p>
+          <p
+            className="text-2xl font-bold tracking-tight text-white"
+            data-atomic-id="a1w29j4z">
             {prefix}{displayValue}{suffix}
           </p>
-          <div className={`flex items-center gap-1 text-xs font-medium ${isPositive ? "text-sky-400" : "text-sky-400"}`}>
+          <div
+            className={`flex items-center gap-1 text-xs font-medium ${isPositive ? "text-sky-400" : "text-sky-400"}`}
+            data-atomic-id="azb9byw">
             {isPositive ? <TrendingUp className="h-3 w-3" /> : <TrendingDown className="h-3 w-3" />}
-            <span>{isPositive ? "+" : ""}{change}% vs período anterior</span>
+            <span data-atomic-id="ajruyuk">{isPositive ? "+" : ""}{change}% vs período anterior</span>
           </div>
         </div>
-        <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${c.bg} border ${c.border}`}>
+        <div
+          className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${c.bg} border ${c.border}`}
+          data-atomic-id="a1mahulv">
           <Icon className={`h-5 w-5 ${c.text}`} />
         </div>
       </div>
@@ -258,19 +270,33 @@ function KPIStatCard({ id, label, value, prefix, suffix, change, icon: Icon, col
 function CustomTooltip({ active, payload, label }: { active?: boolean; payload?: { name: string; value: number; color: string }[]; label?: string }) {
   if (!active || !payload || payload.length === 0) return null;
   return (
-    <div className="rounded-xl border border-white/10 bg-[#1E293B]/95 backdrop-blur-xl p-3 shadow-xl text-xs">
-      <p className="mb-2 font-semibold text-slate-300">{label}</p>
-      {payload.map((entry) => (
-        <div key={entry.name} className="flex items-center gap-2 py-0.5">
-          <span className="h-2 w-2 rounded-full" style={{ background: entry.color }} />
-          <span className="text-slate-400 capitalize">{entry.name}:</span>
-          <span className="font-medium text-white">
-            {entry.name === "ingresos"
-              ? `$${(entry.value ?? 0).toLocaleString("es-ES")}`
-              : (entry.value ?? 0).toLocaleString("es-ES")}
-          </span>
-        </div>
-      ))}
+    <div
+      className="rounded-xl border border-white/10 bg-[#1E293B]/95 backdrop-blur-xl p-3 shadow-xl text-xs"
+      data-atomic-id="a1xjx3dw">
+      <p className="mb-2 font-semibold text-slate-300" data-atomic-id="aklh5pw">{label}</p>
+      {payload.map((entry, __atomicIdx) => (<div
+        key={entry.name}
+        className="flex items-center gap-2 py-0.5"
+        data-atomic-id="ay19y6s"
+        data-atomic-instance={__atomicIdx}>
+        <span
+          className="h-2 w-2 rounded-full"
+          style={{ background: entry.color }}
+          data-atomic-id="adyzig6"
+          data-atomic-instance={__atomicIdx} />
+        <span
+          className="text-slate-400 capitalize"
+          data-atomic-id="af9l4ko"
+          data-atomic-instance={__atomicIdx}>{entry.name}:</span>
+        <span
+          className="font-medium text-white"
+          data-atomic-id="agk6qp6"
+          data-atomic-instance={__atomicIdx}>
+          {entry.name === "ingresos"
+            ? `$${(entry.value ?? 0).toLocaleString("es-ES")}`
+            : (entry.value ?? 0).toLocaleString("es-ES")}
+        </span>
+      </div>))}
     </div>
   );
 }
@@ -278,8 +304,10 @@ function CustomTooltip({ active, payload, label }: { active?: boolean; payload?:
 function BarTooltip({ active, payload }: { active?: boolean; payload?: { value: number }[] }) {
   if (!active || !payload || payload.length === 0) return null;
   return (
-    <div className="rounded-xl border border-white/10 bg-[#1E293B]/95 backdrop-blur-xl p-3 shadow-xl text-xs">
-      <span className="font-medium text-white">{(payload[0]?.value ?? 0).toLocaleString("es-ES")} visitas</span>
+    <div
+      className="rounded-xl border border-white/10 bg-[#1E293B]/95 backdrop-blur-xl p-3 shadow-xl text-xs"
+      data-atomic-id="ablmp39">
+      <span className="font-medium text-white" data-atomic-id="aanodsn">{(payload[0]?.value ?? 0).toLocaleString("es-ES")} visitas</span>
     </div>
   );
 }
@@ -289,9 +317,11 @@ function ScatterTooltip({ active, payload }: { active?: boolean; payload?: { nam
   const dur = payload.find((p) => p.name === "duracion");
   const conv = payload.find((p) => p.name === "conversion");
   return (
-    <div className="rounded-xl border border-white/10 bg-[#1E293B]/95 backdrop-blur-xl p-3 shadow-xl text-xs space-y-1">
-      <div className="flex gap-2"><span className="text-slate-400">Duración:</span><span className="text-white font-medium">{dur?.value ?? 0}s</span></div>
-      <div className="flex gap-2"><span className="text-slate-400">Conversión:</span><span className="text-white font-medium">{conv?.value ?? 0}%</span></div>
+    <div
+      className="rounded-xl border border-white/10 bg-[#1E293B]/95 backdrop-blur-xl p-3 shadow-xl text-xs space-y-1"
+      data-atomic-id="a1lk4ve0">
+      <div className="flex gap-2" data-atomic-id="ayr7tbf"><span className="text-slate-400" data-atomic-id="ae8gct8">Duración:</span><span className="text-white font-medium" data-atomic-id="aevr5vh">{dur?.value ?? 0}s</span></div>
+      <div className="flex gap-2" data-atomic-id="aysmnfx"><span className="text-slate-400" data-atomic-id="aop1uce">Conversión:</span><span className="text-white font-medium" data-atomic-id="apccnen">{conv?.value ?? 0}%</span></div>
     </div>
   );
 }
@@ -343,14 +373,23 @@ export default function AnalyticsPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#0A0F1E] text-white">
+    <main
+      className="min-h-screen bg-[#0A0F1E] text-white"
+      data-atomic-id="a1qy5l8e">
       {/* Ambient glow */}
-      <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-sky-600/10 blur-3xl" />
-        <div className="absolute top-1/3 right-1/4 h-80 w-80 rounded-full bg-sky-600/8 blur-3xl" />
+      <div
+        className="pointer-events-none fixed inset-0 overflow-hidden"
+        data-atomic-id="ahaimld">
+        <div
+          className="absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-sky-600/10 blur-3xl"
+          data-atomic-id="a4rkcck" />
+        <div
+          className="absolute top-1/3 right-1/4 h-80 w-80 rounded-full bg-sky-600/8 blur-3xl"
+          data-atomic-id="a4sz6h2" />
       </div>
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+      <div
+        className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 space-y-10"
+        data-atomic-id="ahbxgpv">
 
         {/* ── Header ── */}
         <motion.div
@@ -360,16 +399,22 @@ export default function AnalyticsPage() {
           className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between"
         >
           <motion.div variants={fadeInUp} className="space-y-1">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+            <div className="flex items-center gap-2 mb-2" data-atomic-id="a14s4f72">
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300"
+                data-atomic-id="ah4x9z4">
                 <ArrowUpRight className="h-3 w-3" />
                 Analíticas avanzadas
               </span>
             </div>
-            <h1 className="text-3xl font-bold tracking-tight text-white text-balance">
+            <h1
+              className="text-3xl font-bold tracking-tight text-white text-balance"
+              data-atomic-id="a5jia9y">
               Panel de Analíticas
             </h1>
-            <p className="text-slate-400 text-sm leading-relaxed max-w-lg">
+            <p
+              className="text-slate-400 text-sm leading-relaxed max-w-lg"
+              data-atomic-id="ad2z5mn">
               Explora el rendimiento de tu negocio con métricas detalladas, tendencias y fuentes de tráfico en un solo lugar.
             </p>
           </motion.div>
@@ -396,29 +441,33 @@ export default function AnalyticsPage() {
 
         {/* ── Filter bar ── */}
         <Section>
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between rounded-2xl border border-white/8 bg-[#0F172A]/60 backdrop-blur-sm p-4">
+          <div
+            className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between rounded-2xl border border-white/8 bg-[#0F172A]/60 backdrop-blur-sm p-4"
+            data-atomic-id="asxk3yn">
             {/* Date range */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3" data-atomic-id="a1qfkrn8">
               <Calendar className="h-4 w-4 text-slate-500 shrink-0" />
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2" data-atomic-id="axvmih">
                 <input
                   type="date"
                   value={dateRange}
                   onChange={(e) => setDateRange(e.target.value)}
                   className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300 focus:border-sky-500/50 focus:outline-none focus:ring-1 focus:ring-sky-500/30 transition-all"
-                />
-                <span className="text-slate-600 text-xs">hasta</span>
+                  data-atomic-id="a1eupqkp" />
+                <span className="text-slate-600 text-xs" data-atomic-id="autn03x">hasta</span>
                 <input
                   type="date"
                   value={dateRangeEnd}
                   onChange={(e) => setDateRangeEnd(e.target.value)}
                   className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300 focus:border-sky-500/50 focus:outline-none focus:ring-1 focus:ring-sky-500/30 transition-all"
-                />
+                  data-atomic-id="a1t988ul" />
               </div>
             </div>
 
             {/* Period toggle */}
-            <div className="flex items-center gap-1 rounded-xl border border-white/8 bg-white/5 p-1">
+            <div
+              className="flex items-center gap-1 rounded-xl border border-white/8 bg-white/5 p-1"
+              data-atomic-id="a1qiefw8">
               {PERIODS.map((p) => (
                 <motion.button
                   key={p.value}
@@ -454,49 +503,83 @@ export default function AnalyticsPage() {
 
         {/* ── Stacked area chart ── */}
         <Section>
-          <div className="rounded-2xl border border-white/8 bg-[#0F172A]/60 backdrop-blur-sm p-6 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_32px_-8px_rgba(0,0,0,0.5)]">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6">
-              <div>
-                <h2 className="text-base font-semibold text-white">Tendencias de métricas</h2>
-                <p className="text-xs text-slate-500 mt-0.5">Evolución de ingresos, usuarios y conversiones</p>
+          <div
+            className="rounded-2xl border border-white/8 bg-[#0F172A]/60 backdrop-blur-sm p-6 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_32px_-8px_rgba(0,0,0,0.5)]"
+            data-atomic-id="apapsgu">
+            <div
+              className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6"
+              data-atomic-id="ak36cip">
+              <div data-atomic-id="a1wiu9hg">
+                <h2 className="text-base font-semibold text-white" data-atomic-id="acur56m">Tendencias de métricas</h2>
+                <p className="text-xs text-slate-500 mt-0.5" data-atomic-id="afgfwt2">Evolución de ingresos, usuarios y conversiones</p>
               </div>
               {/* Metric toggles */}
-              <div className="flex items-center gap-2 flex-wrap">
-                {metricConfig.map((m) => (
-                  <button
-                    key={m.key}
-                    onClick={() => toggleMetric(m.key)}
-                    className={`flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition-all duration-200 ${
-                      activeMetrics[m.key]
-                        ? "border-transparent text-white"
-                        : "border-white/10 text-slate-500 bg-transparent"
-                    }`}
-                    style={activeMetrics[m.key] ? { background: m.color + "33", borderColor: m.color + "55" } : {}}
-                  >
-                    <span
-                      className="h-2 w-2 rounded-full"
-                      style={{ background: activeMetrics[m.key] ? m.color : "#475569" }}
-                    />
-                    {m.label}
-                  </button>
-                ))}
+              <div className="flex items-center gap-2 flex-wrap" data-atomic-id="a1wlnxqg">
+                {metricConfig.map((m, __atomicIdx) => (<button
+                  key={m.key}
+                  onClick={() => toggleMetric(m.key)}
+                  className={`flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition-all duration-200 ${
+                    activeMetrics[m.key]
+                      ? "border-transparent text-white"
+                      : "border-white/10 text-slate-500 bg-transparent"
+                  }`}
+                  style={activeMetrics[m.key] ? { background: m.color + "33", borderColor: m.color + "55" } : {}}
+                  data-atomic-id="a159ll67"
+                  data-atomic-instance={__atomicIdx}>
+                  <span
+                    className="h-2 w-2 rounded-full"
+                    style={{ background: activeMetrics[m.key] ? m.color : "#475569" }}
+                    data-atomic-id="anwv0so"
+                    data-atomic-instance={__atomicIdx} />
+                  {m.label}
+                </button>))}
               </div>
             </div>
 
             <ResponsiveContainer width="100%" height={300}>
               <AreaChart data={trendData} margin={{ top: 4, right: 4, left: 0, bottom: 0 }}>
-                <defs>
-                  <linearGradient id="gradIngresos" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#6366F1" stopOpacity={0.35} />
-                    <stop offset="95%" stopColor="#6366F1" stopOpacity={0.02} />
+                <defs data-atomic-id="a6nzsy0">
+                  <linearGradient id="gradIngresos" x1="0" y1="0" x2="0" y2="1" data-atomic-id="awthbv6">
+                    <stop
+                      offset="5%"
+                      stopColor="#6366F1"
+                      stopOpacity={0.35}
+                      data-atomic-id="a1v9t4ia" />
+                    <stop
+                      offset="95%"
+                      stopColor="#6366F1"
+                      stopOpacity={0.02}
+                      data-atomic-id="a1wkeqms" />
                   </linearGradient>
-                  <linearGradient id="gradUsuarios" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#8B5CF6" stopOpacity={0.3} />
-                    <stop offset="95%" stopColor="#8B5CF6" stopOpacity={0.02} />
+                  <linearGradient id="gradUsuarios" x1="0" y1="0" x2="0" y2="1" data-atomic-id="a13lcw7o">
+                    <stop
+                      offset="5%"
+                      stopColor="#8B5CF6"
+                      stopOpacity={0.3}
+                      data-atomic-id="a6pak2c" />
+                    <stop
+                      offset="95%"
+                      stopColor="#8B5CF6"
+                      stopOpacity={0.02}
+                      data-atomic-id="a7zw66u" />
                   </linearGradient>
-                  <linearGradient id="gradConversiones" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#A78BFA" stopOpacity={0.25} />
-                    <stop offset="95%" stopColor="#A78BFA" stopOpacity={0.02} />
+                  <linearGradient
+                    id="gradConversiones"
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="1"
+                    data-atomic-id="a1ad8gk6">
+                    <stop
+                      offset="5%"
+                      stopColor="#A78BFA"
+                      stopOpacity={0.25}
+                      data-atomic-id="ah5w1li" />
+                    <stop
+                      offset="95%"
+                      stopColor="#A78BFA"
+                      stopOpacity={0.02}
+                      data-atomic-id="aighnq0" />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" stroke="#1E293B" vertical={false} />
@@ -523,14 +606,21 @@ export default function AnalyticsPage() {
         </Section>
 
         {/* ── Bottom two charts ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        <div
+          className="grid grid-cols-1 lg:grid-cols-5 gap-6"
+          data-atomic-id="aq25pmn">
 
           {/* Horizontal bar — traffic sources (3/5) */}
           <Section className="lg:col-span-3">
-            <div className="h-full rounded-2xl border border-white/8 bg-[#0F172A]/60 backdrop-blur-sm p-6 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_32px_-8px_rgba(0,0,0,0.5)]">
-              <div className="mb-6">
-                <h2 className="text-base font-semibold text-white">Fuentes de tráfico</h2>
-                <p className="text-xs text-slate-500 mt-0.5">Visitas por canal de adquisición</p>
+            <div
+              className="h-full rounded-2xl border border-white/8 bg-[#0F172A]/60 backdrop-blur-sm p-6 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_32px_-8px_rgba(0,0,0,0.5)]"
+              data-atomic-id="a1ch3f6v"
+              style={{
+                color: "#f59e0b"
+              }}>
+              <div className="mb-6" data-atomic-id="a18yf2x6">
+                <h2 className="text-base font-semibold text-white" data-atomic-id="a1mpr7us">Fuentes de tráfico</h2>
+                <p className="text-xs text-slate-500 mt-0.5" data-atomic-id="aae09ss">Visitas por canal de adquisición</p>
               </div>
               <ResponsiveContainer width="100%" height={260}>
                 <BarChart
@@ -560,19 +650,41 @@ export default function AnalyticsPage() {
               </ResponsiveContainer>
 
               {/* Source legend with percentages */}
-              <div className="mt-4 space-y-2">
-                {trafficSources.slice(0, 3).map((s) => {
+              <div className="mt-4 space-y-2" data-atomic-id="a192nlao">
+                {trafficSources.slice(0, 3).map((s, __atomicIdx) => {
                   const total = trafficSources.reduce((acc, x) => acc + x.visitas, 0);
                   const pct = ((s.visitas / total) * 100).toFixed(1);
                   return (
-                    <div key={s.source} className="flex items-center justify-between text-xs">
-                      <div className="flex items-center gap-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
-                        <span className="text-slate-400">{s.source}</span>
+                    <div
+                      key={s.source}
+                      className="flex items-center justify-between text-xs"
+                      data-atomic-id="a13rc1ax"
+                      data-atomic-instance={__atomicIdx}>
+                      <div
+                        className="flex items-center gap-2"
+                        data-atomic-id="ahzl070"
+                        data-atomic-instance={__atomicIdx}>
+                        <span
+                          className="h-1.5 w-1.5 rounded-full bg-sky-400"
+                          data-atomic-id="a17kuoem"
+                          data-atomic-instance={__atomicIdx} />
+                        <span
+                          className="text-slate-400"
+                          data-atomic-id="a18vgaj4"
+                          data-atomic-instance={__atomicIdx}>{s.source}</span>
                       </div>
-                      <div className="flex items-center gap-3">
-                        <span className="text-slate-500">{s.visitas.toLocaleString("es-ES")}</span>
-                        <span className="font-medium text-sky-300 w-10 text-right">{pct}%</span>
+                      <div
+                        className="flex items-center gap-3"
+                        data-atomic-id="ai0zubi"
+                        data-atomic-instance={__atomicIdx}>
+                        <span
+                          className="text-slate-500"
+                          data-atomic-id="a1i1g5xs"
+                          data-atomic-instance={__atomicIdx}>{s.visitas.toLocaleString("es-ES")}</span>
+                        <span
+                          className="font-medium text-sky-300 w-10 text-right"
+                          data-atomic-id="a1jc1s2a"
+                          data-atomic-instance={__atomicIdx}>{pct}%</span>
                       </div>
                     </div>
                   );
@@ -583,10 +695,12 @@ export default function AnalyticsPage() {
 
           {/* Scatter plot — conversion vs session (2/5) */}
           <Section className="lg:col-span-2">
-            <div className="h-full rounded-2xl border border-white/8 bg-[#0F172A]/60 backdrop-blur-sm p-6 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_32px_-8px_rgba(0,0,0,0.5)]">
-              <div className="mb-6">
-                <h2 className="text-base font-semibold text-white">Conversión vs. Duración</h2>
-                <p className="text-xs text-slate-500 mt-0.5">Correlación entre tiempo en sesión y tasa de conversión</p>
+            <div
+              className="h-full rounded-2xl border border-white/8 bg-[#0F172A]/60 backdrop-blur-sm p-6 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_32px_-8px_rgba(0,0,0,0.5)]"
+              data-atomic-id="a1q0ujvv">
+              <div className="mb-6" data-atomic-id="a1ukgl8u">
+                <h2 className="text-base font-semibold text-white" data-atomic-id="a14gcnt4">Conversión vs. Duración</h2>
+                <p className="text-xs text-slate-500 mt-0.5" data-atomic-id="agaju3k">Correlación entre tiempo en sesión y tasa de conversión</p>
               </div>
               <ResponsiveContainer width="100%" height={260}>
                 <ScatterChart margin={{ top: 4, right: 4, left: -16, bottom: 0 }}>
@@ -615,11 +729,15 @@ export default function AnalyticsPage() {
                 </ScatterChart>
               </ResponsiveContainer>
 
-              <div className="mt-4 rounded-xl border border-sky-500/15 bg-sky-500/5 p-3">
-                <p className="text-xs text-slate-400 leading-relaxed">
+              <div
+                className="mt-4 rounded-xl border border-sky-500/15 bg-sky-500/5 p-3"
+                data-atomic-id="a1una9hu">
+                <p
+                  className="text-xs text-slate-400 leading-relaxed"
+                  data-atomic-id="ab0sroi">
                   Las sesiones de más de 60 segundos tienen una tasa de conversión promedio del
-                  <span className="font-semibold text-sky-300"> 58.4%</span>, frente al
-                  <span className="font-semibold text-sky-400"> 18.3%</span> de las sesiones cortas.
+                  <span className="font-semibold text-sky-300" data-atomic-id="a1re3fmv"> 58.4%</span>, frente al
+                  <span className="font-semibold text-sky-400" data-atomic-id="a1sop1rd"> 18.3%</span> de las sesiones cortas.
                 </p>
               </div>
             </div>
@@ -628,8 +746,12 @@ export default function AnalyticsPage() {
 
         {/* ── Summary stats row ── */}
         <Section>
-          <div className="rounded-2xl border border-white/8 bg-[#0F172A]/60 backdrop-blur-sm p-6">
-            <h2 className="text-base font-semibold text-white mb-5">Resumen del período</h2>
+          <div
+            className="rounded-2xl border border-white/8 bg-[#0F172A]/60 backdrop-blur-sm p-6"
+            data-atomic-id="a1n9ozvh">
+            <h2
+              className="text-base font-semibold text-white mb-5"
+              data-atomic-id="a1lccrpz">Resumen del período</h2>
             <motion.div
               variants={staggerContainer}
               initial="hidden"
@@ -644,7 +766,7 @@ export default function AnalyticsPage() {
                 { label: "Sesiones", value: "1.8M", delta: "+21%" },
                 { label: "Ingresos/usuario", value: "$13.30", delta: "+7.6%" },
                 { label: "Retención 30d", value: "62.1%", delta: "+4.8%" },
-              ].map((item) => {
+              ].map((item, __atomicIdx) => {
                 const isPos = item.delta.startsWith("+");
                 return (
                   <motion.div
@@ -653,9 +775,18 @@ export default function AnalyticsPage() {
                     whileHover={{ y: -2, transition: { duration: 0.15 } }}
                     className="rounded-xl border border-white/6 bg-white/3 p-4 text-center"
                   >
-                    <p className="text-xl font-bold text-white tracking-tight">{item.value}</p>
-                    <p className="text-xs text-slate-500 mt-1 leading-tight">{item.label}</p>
-                    <p className={`text-xs font-medium mt-2 ${isPos ? "text-sky-400" : "text-sky-400"}`}>
+                    <p
+                      className="text-xl font-bold text-white tracking-tight"
+                      data-atomic-id="audq4a"
+                      data-atomic-instance={__atomicIdx}>{item.value}</p>
+                    <p
+                      className="text-xs text-slate-500 mt-1 leading-tight"
+                      data-atomic-id="audrss"
+                      data-atomic-instance={__atomicIdx}>{item.label}</p>
+                    <p
+                      className={`text-xs font-medium mt-2 ${isPos ? "text-sky-400" : "text-sky-400"}`}
+                      data-atomic-id="audtha"
+                      data-atomic-instance={__atomicIdx}>
                       {item.delta}
                     </p>
                   </motion.div>
@@ -667,26 +798,32 @@ export default function AnalyticsPage() {
 
         {/* ── Top pages table ── */}
         <Section>
-          <div className="rounded-2xl border border-white/8 bg-[#0F172A]/60 backdrop-blur-sm overflow-hidden shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_32px_-8px_rgba(0,0,0,0.5)]">
-            <div className="flex items-center justify-between px-6 py-4 border-b border-white/8">
-              <div>
-                <h2 className="text-base font-semibold text-white">Páginas más visitadas</h2>
-                <p className="text-xs text-slate-500 mt-0.5">Rendimiento por URL en el período seleccionado</p>
+          <div
+            className="rounded-2xl border border-white/8 bg-[#0F172A]/60 backdrop-blur-sm overflow-hidden shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_32px_-8px_rgba(0,0,0,0.5)]"
+            data-atomic-id="a1sc2ld">
+            <div
+              className="flex items-center justify-between px-6 py-4 border-b border-white/8"
+              data-atomic-id="a1v4tfwk">
+              <div data-atomic-id="a1xmy1s7">
+                <h2 className="text-base font-semibold text-white" data-atomic-id="a1myun5t">Páginas más visitadas</h2>
+                <p className="text-xs text-slate-500 mt-0.5" data-atomic-id="ay2njnd">Rendimiento por URL en el período seleccionado</p>
               </div>
-              <span className="text-xs text-slate-500">Top 6</span>
+              <span className="text-xs text-slate-500" data-atomic-id="aqcj74o">Top 6</span>
             </div>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-white/5">
-                    {["Página", "Visitas", "Tiempo medio", "Rebote", "Conversión"].map((h) => (
-                      <th key={h} className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider whitespace-nowrap">
-                        {h}
-                      </th>
-                    ))}
+            <div className="overflow-x-auto" data-atomic-id="a1v68a12">
+              <table className="w-full text-sm" data-atomic-id="azi2c3y">
+                <thead data-atomic-id="a1c7be3z">
+                  <tr className="border-b border-white/5" data-atomic-id="a6tmywi">
+                    {["Página", "Visitas", "Tiempo medio", "Rebote", "Conversión"].map((h, __atomicIdx) => (<th
+                      key={h}
+                      className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider whitespace-nowrap"
+                      data-atomic-id="ad5k1rq"
+                      data-atomic-instance={__atomicIdx}>
+                      {h}
+                    </th>))}
                   </tr>
                 </thead>
-                <tbody>
+                <tbody data-atomic-id="ajvw8dp">
                   {[
                     { page: "/inicio", visitas: 48200, tiempo: "3m 42s", rebote: "28.4%", conv: "12.8%" },
                     { page: "/precios", visitas: 31500, tiempo: "5m 18s", rebote: "19.2%", conv: "24.6%" },
@@ -703,23 +840,45 @@ export default function AnalyticsPage() {
                       transition={{ delay: i * 0.06, duration: 0.4, ease: "easeOut" }}
                       className="border-b border-white/5 hover:bg-white/3 transition-colors duration-150"
                     >
-                      <td className="px-6 py-3.5 font-mono text-xs text-sky-300">{row.page}</td>
-                      <td className="px-6 py-3.5 text-slate-300 font-medium">{row.visitas.toLocaleString("es-ES")}</td>
-                      <td className="px-6 py-3.5 text-slate-400">{row.tiempo}</td>
-                      <td className="px-6 py-3.5">
-                        <span className={`text-xs font-medium ${parseFloat(row.rebote) < 30 ? "text-sky-400" : parseFloat(row.rebote) < 38 ? "text-sky-400" : "text-sky-400"}`}>
+                      <td
+                        className="px-6 py-3.5 font-mono text-xs text-sky-300"
+                        data-atomic-id="a5fft90"
+                        data-atomic-instance={i}>{row.page}</td>
+                      <td
+                        className="px-6 py-3.5 text-slate-300 font-medium"
+                        data-atomic-id="a5fhcpi"
+                        data-atomic-instance={i}>{row.visitas.toLocaleString("es-ES")}</td>
+                      <td
+                        className="px-6 py-3.5 text-slate-400"
+                        data-atomic-id="a5fiw60"
+                        data-atomic-instance={i}>{row.tiempo}</td>
+                      <td className="px-6 py-3.5" data-atomic-id="a5fkfmi" data-atomic-instance={i}>
+                        <span
+                          className={`text-xs font-medium ${parseFloat(row.rebote) < 30 ? "text-sky-400" : parseFloat(row.rebote) < 38 ? "text-sky-400" : "text-sky-400"}`}
+                          data-atomic-id="aebhmt3"
+                          data-atomic-instance={i}>
                           {row.rebote}
                         </span>
                       </td>
-                      <td className="px-6 py-3.5">
-                        <div className="flex items-center gap-2">
-                          <div className="h-1.5 w-20 rounded-full bg-white/10 overflow-hidden">
+                      <td className="px-6 py-3.5" data-atomic-id="a5flz30" data-atomic-instance={i}>
+                        <div
+                          className="flex items-center gap-2"
+                          data-atomic-id="ahyxg7e"
+                          data-atomic-instance={i}>
+                          <div
+                            className="h-1.5 w-20 rounded-full bg-white/10 overflow-hidden"
+                            data-atomic-id="a1xd4v9p"
+                            data-atomic-instance={i}>
                             <div
                               className="h-full rounded-full bg-sky-500"
                               style={{ width: row.conv }}
-                            />
+                              data-atomic-id="ag97rzk"
+                              data-atomic-instance={i} />
                           </div>
-                          <span className="text-xs text-slate-300 font-medium">{row.conv}</span>
+                          <span
+                            className="text-xs text-slate-300 font-medium"
+                            data-atomic-id="ahcs866"
+                            data-atomic-instance={i}>{row.conv}</span>
                         </div>
                       </td>
                     </motion.tr>
