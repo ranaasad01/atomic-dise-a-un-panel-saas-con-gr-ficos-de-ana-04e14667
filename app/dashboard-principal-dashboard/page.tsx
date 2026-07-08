@@ -144,10 +144,10 @@ const barData = [
 
 const colorMap: Record<string, { bg: string; border: string; text: string; icon: string }> = {
   indigo: {
-    bg: "bg-cyan-500/10",
-    border: "border-cyan-500/20",
-    text: "text-cyan-400",
-    icon: "text-cyan-400",
+    bg: "bg-rose-500/10",
+    border: "border-rose-500/20",
+    text: "text-rose-400",
+    icon: "text-rose-400",
   },
   violet: {
     bg: "bg-violet-500/10",
@@ -223,7 +223,7 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-[#0F172A] text-white">
       {/* Ambient glow */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-40 left-1/4 h-[500px] w-[500px] rounded-full bg-cyan-600/8 blur-[120px]" />
+        <div className="absolute -top-40 left-1/4 h-[500px] w-[500px] rounded-full bg-rose-600/8 blur-[120px]" />
         <div className="absolute top-1/3 right-1/4 h-[400px] w-[400px] rounded-full bg-violet-600/6 blur-[100px]" />
       </div>
 
@@ -237,7 +237,7 @@ export default function DashboardPage() {
           className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
         >
           <motion.div variants={fadeInUp}>
-            <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-cyan-400">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-rose-400">
               {APP_NAME}
             </p>
             <h1 className="text-3xl font-bold tracking-tight text-white text-balance">
@@ -260,7 +260,7 @@ export default function DashboardPage() {
             <motion.button
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
-              className="flex items-center gap-2 rounded-lg bg-cyan-500 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-400 transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.3)]"
+              className="flex items-center gap-2 rounded-lg bg-rose-500 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-400 transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.3)]"
             >
               <Download className="h-3.5 w-3.5" />
               Exportar
@@ -336,7 +336,7 @@ export default function DashboardPage() {
                     onClick={() => setActivePeriod(p.value)}
                     className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-all duration-200 ${
                       activePeriod === p.value
-                        ? "bg-cyan-500 text-white shadow-[0_0_12px_rgba(99,102,241,0.4)]"
+                        ? "bg-rose-500 text-white shadow-[0_0_12px_rgba(99,102,241,0.4)]"
                         : "text-slate-400 hover:text-slate-200"
                     }`}
                   >
@@ -452,7 +452,7 @@ export default function DashboardPage() {
               </div>
               <div className="flex items-center gap-3 text-xs text-slate-400">
                 <span className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-cyan-400" />
+                  <span className="h-2 w-2 rounded-full bg-rose-400" />
                   Nuevos
                 </span>
                 <span className="flex items-center gap-1.5">
@@ -571,7 +571,7 @@ export default function DashboardPage() {
                     >
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
-                          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-xs font-bold text-cyan-400">
+                          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-rose-500/10 border border-rose-500/20 text-xs font-bold text-rose-400">
                             {idx + 1}
                           </div>
                           <span className="font-medium text-slate-200 group-hover:text-white transition-colors">{product.name}</span>
