@@ -14,6 +14,7 @@ export const navLinks: NavLink[] = [
   { label: "Analíticas", href: "/analytics", type: "route" },
   { label: "Usuarios", href: "/users", type: "route" },
   { label: "Configuración", href: "/settings", type: "route" },
+  { label: "Iniciar Sesión", href: "/login", type: "route" },
 ];
 
 export interface KPICard {
