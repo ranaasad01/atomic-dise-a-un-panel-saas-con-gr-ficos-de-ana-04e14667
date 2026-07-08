@@ -237,7 +237,14 @@ export default function HomePage() {
                 <p
                   className="text-xl font-bold text-white"
                   data-atomic-id="aeuyly3"
-                  data-atomic-instance={__atomicIdx}>{stat.value}</p>
+                  data-atomic-instance={__atomicIdx}
+                  style={__atomicIdx === 2 ? {
+                    color: "#6366f1",
+                    backgroundColor: "#84cc16",
+                    fontSize: "64px",
+                    padding: "64px",
+                    borderRadius: "50%"
+                  } : undefined}>{stat.value}</p>
                 <p
                   className="text-xs text-slate-500 mt-0.5"
                   data-atomic-id="aeuynml"
